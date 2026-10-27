@@ -4555,9 +4555,14 @@
         banner.className = "trial-banner";
         banner.innerHTML = "🧪 Bản dùng thử — Chỉ 3 chủ đề cơ bản (HSK1, HSK2, Cuộc sống phần 1)";
         list.appendChild(banner);
+      } else if (unlockMode === "trial30") {
+        const banner = document.createElement("div");
+        banner.className = "trial-banner";
+        banner.innerHTML = "⏱️ Key dùng thử 30 phút — Full 13 chủ đề";
+        list.appendChild(banner);
       }
 
-      const allowed = unlockMode === "full" ? Object.keys(MODULES) : TRIAL_MODULES;
+      const allowed = (unlockMode === "full" || unlockMode === "trial30") ? Object.keys(MODULES) : TRIAL_MODULES;
       allowed.forEach(key => {
         if (!MODULES[key]) return;
         const m = MODULES[key];
