@@ -359,7 +359,11 @@
     <button onclick="checkKey()">Mở khóa</button>
     <button onclick="startTrial()" style="background:#10b981;margin-top:10px;">🆓 Dùng thử miễn phí (Phần 1 mỗi chủ đề)</button>
     <p id="loginError" style="display:none;color:#ef4444;font-size:0.9rem;margin-top:12px;"></p>
-    <div id="bankInfo" style="margin-top:28px;padding:16px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;font-size:0.88rem;line-height:1.6;color:#334155;text-align:left;">
+    <div id="getKeyCard" onclick="toggleBankInfo()" style="margin-top:28px;padding:16px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;font-size:0.95rem;font-weight:700;color:#0f172a;cursor:pointer;text-align:center;user-select:none;">
+      🔑 Nhận key vĩnh viễn
+      <span id="getKeyArrow" style="float:right;font-weight:400;">▼</span>
+    </div>
+    <div id="bankInfo" style="display:none;margin-top:8px;padding:16px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;font-size:0.88rem;line-height:1.6;color:#334155;text-align:left;">
       <div style="font-weight:700;color:#0f172a;margin-bottom:6px;">💳 Thông tin chuyển khoản chính chủ</div>
       <div id="bankContent">Đang tải...</div>
     </div>
@@ -368,7 +372,7 @@
   <!-- LEVEL SELECT -->
   <div id="levelScreen">
     <h1>📚 Chọn chủ đề luyện</h1>
-    <p class="desc">13 chủ đề · 200 câu mỗi chủ đề</p>
+    <p class="desc">22 chủ đề · 200 câu mỗi chủ đề</p>
     <div class="level-list" id="levelList"></div>
     <button class="btn-logout" onclick="logout()">Đăng xuất</button>
   </div>
@@ -13595,8 +13599,4201 @@
             "vi": "Cảm ơn bạn chỉ đường, tôi đã tìm thấy."
       }
 ]
-    }
-    };
+    },
+    
+  "VAN_PHONG-1": {
+    title: "💼 Văn phòng công sở phần 1",
+    color: "#0d47a1",
+    sections: [
+      {
+            "name": "Chào hỏi & công việc hàng ngày",
+            "start": 0
+      },
+      {
+            "name": "Họp & báo cáo",
+            "start": 20
+      },
+      {
+            "name": "Email & tài liệu",
+            "start": 40
+      },
+      {
+            "name": "Lịch trình & sắp xếp",
+            "start": 60
+      },
+      {
+            "name": "Phối hợp đồng nghiệp",
+            "start": 80
+      },
+      {
+            "name": "Máy tính & thiết bị",
+            "start": 100
+      },
+      {
+            "name": "Công việc & tiến độ",
+            "start": 120
+      },
+      {
+            "name": "Khách & liên hệ",
+            "start": 140
+      },
+      {
+            "name": "Quy định văn phòng",
+            "start": 160
+      },
+      {
+            "name": "Tình huống tổng hợp",
+            "start": 180
+      }
+],
+    sentences: [
+      {
+            "zh": "早上好，今天有什么工作安排？",
+            "pinyin": "zǎo shang hǎo, jīn tiān yǒu shén me gōng zuò ān pái?",
+            "vi": "Chào buổi sáng, hôm nay có sắp xếp công việc gì?"
+      },
+      {
+            "zh": "我先处理邮件，然后准备会议材料。",
+            "pinyin": "wǒ xiān chǔ lǐ yóu jiàn, rán hòu zhǔn bèi huì yì cái liào.",
+            "vi": "Tôi xử lý email trước, rồi chuẩn bị tài liệu họp."
+      },
+      {
+            "zh": "今天的任务清单发到群里了吗？",
+            "pinyin": "jīn tiān de rèn wù qīng dān fā dào qún lǐ le ma?",
+            "vi": "Danh sách nhiệm vụ hôm nay đã gửi vào nhóm chưa?"
+      },
+      {
+            "zh": "已经发了，请大家查看一下。",
+            "pinyin": "yǐ jīng fā le, qǐng dà jiā chá kàn yī xià.",
+            "vi": "Đã gửi rồi, xin mọi người xem một chút."
+      },
+      {
+            "zh": "你昨天的报告做完了吗？",
+            "pinyin": "nǐ zuó tiān de bào gào zuò wán le ma?",
+            "vi": "Báo cáo hôm qua của bạn làm xong chưa?"
+      },
+      {
+            "zh": "做完了，已经发给领导了。",
+            "pinyin": "zuò wán le, yǐ jīng fā gěi lǐng dǎo le.",
+            "vi": "Làm xong rồi, đã gửi cho lãnh đạo."
+      },
+      {
+            "zh": "今天需要加班吗？",
+            "pinyin": "jīn tiān xū yào jiā bān ma?",
+            "vi": "Hôm nay có cần tăng ca không?"
+      },
+      {
+            "zh": "可能需要，看下午的进度。",
+            "pinyin": "kě néng xū yào, kàn xià wǔ de jìn dù.",
+            "vi": "Có thể cần, xem tiến độ buổi chiều."
+      },
+      {
+            "zh": "请把今天的工作重点告诉我。",
+            "pinyin": "qǐng bǎ jīn tiān de gōng zuò zhòng diǎn gào sù wǒ.",
+            "vi": "Xin nói cho tôi trọng điểm công việc hôm nay."
+      },
+      {
+            "zh": "重点是完成季度报告和客户资料。",
+            "pinyin": "zhòng diǎn shì wán chéng jì dù bào gào hé kè hù zī liào.",
+            "vi": "Trọng điểm là hoàn thành báo cáo quý và tài liệu khách hàng."
+      },
+      {
+            "zh": "办公室空调温度合适吗？",
+            "pinyin": "bàn gōng shì kōng tiáo wēn dù hé shì ma?",
+            "vi": "Nhiệt độ điều hòa văn phòng có hợp lý không?"
+      },
+      {
+            "zh": "有点冷，我调高一点。",
+            "pinyin": "yǒu diǎn lěng, wǒ tiáo gāo yī diǎn.",
+            "vi": "Hơi lạnh, tôi chỉnh cao một chút."
+      },
+      {
+            "zh": "请帮我打印这份文件。",
+            "pinyin": "qǐng bāng wǒ dǎ yìn zhè fèn wén jiàn.",
+            "vi": "Xin giúp tôi in file này."
+      },
+      {
+            "zh": "打印机缺纸了，我去加一下。",
+            "pinyin": "dǎ yìn jī quē zhǐ le, wǒ qù jiā yī xià.",
+            "vi": "Máy in hết giấy, tôi đi thêm một chút."
+      },
+      {
+            "zh": "今天中午一起吃饭吗？",
+            "pinyin": "jīn tiān zhōng wǔ yī qǐ chī fàn ma?",
+            "vi": "Trưa nay cùng ăn cơm không?"
+      },
+      {
+            "zh": "可以，我先把这个文件发完。",
+            "pinyin": "kě yǐ, wǒ xiān bǎ zhè ge wén jiàn fā wán.",
+            "vi": "Được, tôi gửi xong file này trước."
+      },
+      {
+            "zh": "你有没有看到我放在桌上的资料？",
+            "pinyin": "nǐ yǒu méi yǒu kàn dào wǒ fàng zài zhuō shàng de zī liào?",
+            "vi": "Bạn có thấy tài liệu tôi để trên bàn không?"
+      },
+      {
+            "zh": "看到了，我帮你收起来了。",
+            "pinyin": "kàn dào le, wǒ bāng nǐ shōu qǐ lái le.",
+            "vi": "Thấy rồi, tôi giúp bạn cất đi."
+      },
+      {
+            "zh": "下班前请把电脑关机。",
+            "pinyin": "xià bān qián qǐng bǎ diàn nǎo guān jī.",
+            "vi": "Trước khi tan ca xin tắt máy tính."
+      },
+      {
+            "zh": "我会记得的，谢谢提醒。",
+            "pinyin": "wǒ huì jì de de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ nhớ, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "今天下午两点有部门会议。",
+            "pinyin": "jīn tiān xià wǔ liǎng diǎn yǒu bù mén huì yì.",
+            "vi": "Chiều nay hai giờ có họp bộ phận."
+      },
+      {
+            "zh": "请准备一下会议材料。",
+            "pinyin": "qǐng zhǔn bèi yī xià huì yì cái liào.",
+            "vi": "Xin chuẩn bị tài liệu họp một chút."
+      },
+      {
+            "zh": "会议纪要谁来记录？",
+            "pinyin": "huì yì jì yào shuí lái jì lù?",
+            "vi": "Ai ghi biên bản họp?"
+      },
+      {
+            "zh": "我来记录，会后发给大家。",
+            "pinyin": "wǒ lái jì lù, huì hòu fā gěi dà jiā.",
+            "vi": "Tôi ghi, sau họp gửi mọi người."
+      },
+      {
+            "zh": "请大家准时参加会议。",
+            "pinyin": "qǐng dà jiā zhǔn shí cān jiā huì yì.",
+            "vi": "Xin mọi người tham gia họp đúng giờ."
+      },
+      {
+            "zh": "我可能晚到几分钟，先开始吧。",
+            "pinyin": "wǒ kě néng wǎn dào jǐ fēn zhōng, xiān kāi shǐ ba.",
+            "vi": "Tôi có thể đến muộn vài phút, bắt đầu trước đi."
+      },
+      {
+            "zh": "这个项目的进度怎么样？",
+            "pinyin": "zhè ge xiàng mù de jìn dù zěn me yàng?",
+            "vi": "Tiến độ dự án này thế nào?"
+      },
+      {
+            "zh": "目前完成百分之七十，下周可以完成。",
+            "pinyin": "mù qián wán chéng bǎi fēn zhī qī shí, xià zhōu kě yǐ wán chéng.",
+            "vi": "Hiện hoàn thành 70%, tuần sau có thể xong."
+      },
+      {
+            "zh": "请汇报一下本月的工作情况。",
+            "pinyin": "qǐng huì bào yī xià běn yuè de gōng zuò qíng kuàng.",
+            "vi": "Xin báo cáo tình hình công việc tháng này."
+      },
+      {
+            "zh": "本月完成了三个主要项目。",
+            "pinyin": "běn yuè wán chéng le sān ge zhǔ yào xiàng mù.",
+            "vi": "Tháng này hoàn thành ba dự án chính."
+      },
+      {
+            "zh": "有没有遇到什么困难？",
+            "pinyin": "yǒu méi yǒu yù dào shén me kùn nan?",
+            "vi": "Có gặp khó khăn gì không?"
+      },
+      {
+            "zh": "客户资料收集有点慢，正在跟进。",
+            "pinyin": "kè hù zī liào shōu jí yǒu diǎn màn, zhèng zài gēn jìn.",
+            "vi": "Thu thập tài liệu khách hàng hơi chậm, đang theo dõi."
+      },
+      {
+            "zh": "请把会议安排发到日历里。",
+            "pinyin": "qǐng bǎ huì yì ān pái fā dào rì lì lǐ.",
+            "vi": "Xin gửi lịch họp vào lịch."
+      },
+      {
+            "zh": "已经发了，请大家确认。",
+            "pinyin": "yǐ jīng fā le, qǐng dà jiā què rèn.",
+            "vi": "Đã gửi, xin mọi người xác nhận."
+      },
+      {
+            "zh": "这个方案需要领导审批吗？",
+            "pinyin": "zhè ge fāng àn xū yào lǐng dǎo shěn pī ma?",
+            "vi": "Phương án này có cần lãnh đạo phê duyệt không?"
+      },
+      {
+            "zh": "需要，我已经提交了。",
+            "pinyin": "xū yào, wǒ yǐ jīng tí jiāo le.",
+            "vi": "Cần, tôi đã nộp."
+      },
+      {
+            "zh": "会后请把决议发到群里。",
+            "pinyin": "huì hòu qǐng bǎ jué yì fā dào qún lǐ.",
+            "vi": "Sau họp xin gửi nghị quyết vào nhóm."
+      },
+      {
+            "zh": "没问题，我整理好就发。",
+            "pinyin": "méi wèn tí, wǒ zhěng lǐ hǎo jiù fā.",
+            "vi": "Không vấn đề, tôi sắp xếp xong là gửi."
+      },
+      {
+            "zh": "下周的会议改到周三可以吗？",
+            "pinyin": "xià zhōu de huì yì gǎi dào zhōu sān kě yǐ ma?",
+            "vi": "Họp tuần sau đổi sang thứ tư được không?"
+      },
+      {
+            "zh": "可以，我通知大家。",
+            "pinyin": "kě yǐ, wǒ tōng zhī dà jiā.",
+            "vi": "Được, tôi thông báo mọi người."
+      },
+      {
+            "zh": "请把这份文件发到我邮箱。",
+            "pinyin": "qǐng bǎ zhè fèn wén jiàn fā dào wǒ yóu xiāng.",
+            "vi": "Xin gửi file này vào email của tôi."
+      },
+      {
+            "zh": "已经发了，请查收。",
+            "pinyin": "yǐ jīng fā le, qǐng chá shōu.",
+            "vi": "Đã gửi, xin kiểm tra."
+      },
+      {
+            "zh": "邮件附件打不开怎么办？",
+            "pinyin": "yóu jiàn fù jiàn dǎ bù kāi zěn me bàn?",
+            "vi": "File đính kèm email không mở được thì làm sao?"
+      },
+      {
+            "zh": "可能是格式问题，我重新发一份。",
+            "pinyin": "kě néng shì gé shì wèn tí, wǒ chóng xīn fā yī fèn.",
+            "vi": "Có thể là vấn đề định dạng, tôi gửi lại một bản."
+      },
+      {
+            "zh": "请把合同扫描后发给我。",
+            "pinyin": "qǐng bǎ hé tong sǎo miáo hòu fā gěi wǒ.",
+            "vi": "Xin scan hợp đồng rồi gửi cho tôi."
+      },
+      {
+            "zh": "好的，我马上扫描。",
+            "pinyin": "hǎo de, wǒ mǎ shàng sǎo miáo.",
+            "vi": "Được, tôi scan ngay."
+      },
+      {
+            "zh": "这份资料需要存档吗？",
+            "pinyin": "zhè fèn zī liào xū yào cún dàng ma?",
+            "vi": "Tài liệu này có cần lưu trữ không?"
+      },
+      {
+            "zh": "需要，请放到共享文件夹里。",
+            "pinyin": "xū yào, qǐng fàng dào gòng xiǎng wén jiàn jiā lǐ.",
+            "vi": "Cần, xin để vào thư mục chia sẻ."
+      },
+      {
+            "zh": "请把表格填写完整再发。",
+            "pinyin": "qǐng bǎ biǎo gé tián xiě wán zhěng zài fā.",
+            "vi": "Xin điền đầy đủ bảng rồi gửi."
+      },
+      {
+            "zh": "已经填好了，请查收。",
+            "pinyin": "yǐ jīng tián hǎo le, qǐng chá shōu.",
+            "vi": "Đã điền xong, xin kiểm tra."
+      },
+      {
+            "zh": "客户要求提供最新报价单。",
+            "pinyin": "kè hù yāo qiú tí gōng zuì xīn bào jià dān.",
+            "vi": "Khách hàng yêu cầu cung cấp bảng báo giá mới nhất."
+      },
+      {
+            "zh": "我正在准备，下午发给你。",
+            "pinyin": "wǒ zhèng zài zhǔn bèi, xià wǔ fā gěi nǐ.",
+            "vi": "Tôi đang chuẩn bị, chiều gửi cho bạn."
+      },
+      {
+            "zh": "请把会议记录整理成文档。",
+            "pinyin": "qǐng bǎ huì yì jì lù zhěng lǐ chéng wén dàng.",
+            "vi": "Xin sắp xếp biên bản họp thành tài liệu."
+      },
+      {
+            "zh": "整理好了，我发到群里。",
+            "pinyin": "zhěng lǐ hǎo le, wǒ fā dào qún lǐ.",
+            "vi": "Sắp xếp xong, tôi gửi vào nhóm."
+      },
+      {
+            "zh": "这个文件版本不对，请发最新的。",
+            "pinyin": "zhè ge wén jiàn bǎn běn bú duì, qǐng fā zuì xīn de.",
+            "vi": "Phiên bản file này không đúng, xin gửi bản mới nhất."
+      },
+      {
+            "zh": "抱歉，我重新发一份。",
+            "pinyin": "bào qiàn, wǒ chóng xīn fā yī fèn.",
+            "vi": "Xin lỗi, tôi gửi lại một bản."
+      },
+      {
+            "zh": "请把资料备份到云端。",
+            "pinyin": "qǐng bǎ zī liào bèi fèn dào yún duān.",
+            "vi": "Xin sao lưu tài liệu lên đám mây."
+      },
+      {
+            "zh": "已经备份了。",
+            "pinyin": "yǐ jīng bèi fèn le.",
+            "vi": "Đã sao lưu."
+      },
+      {
+            "zh": "打印时请双面打印，节约纸张。",
+            "pinyin": "dǎ yìn shí qǐng shuāng miàn dǎ yìn, jié yuē zhǐ zhāng.",
+            "vi": "Khi in xin in hai mặt, tiết kiệm giấy."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "明天上午有客户来访。",
+            "pinyin": "míng tiān shàng wǔ yǒu kè hù lái fǎng.",
+            "vi": "Sáng mai có khách hàng đến thăm."
+      },
+      {
+            "zh": "请安排会议室和接待。",
+            "pinyin": "qǐng ān pái huì yì shì hé jiē dài.",
+            "vi": "Xin sắp xếp phòng họp và tiếp đón."
+      },
+      {
+            "zh": "我下午有事，可以调一下会议吗？",
+            "pinyin": "wǒ xià wǔ yǒu shì, kě yǐ tiáo yī xià huì yì ma?",
+            "vi": "Chiều tôi có việc, có thể đổi họp một chút không?"
+      },
+      {
+            "zh": "可以，我看看大家的时间。",
+            "pinyin": "kě yǐ, wǒ kàn kan dà jiā de shí jiān.",
+            "vi": "Được, tôi xem thời gian mọi người."
+      },
+      {
+            "zh": "请把下周的行程发给我。",
+            "pinyin": "qǐng bǎ xià zhōu de xíng chéng fā gěi wǒ.",
+            "vi": "Xin gửi lịch trình tuần sau cho tôi."
+      },
+      {
+            "zh": "已经发到你邮箱了。",
+            "pinyin": "yǐ jīng fā dào nǐ yóu xiāng le.",
+            "vi": "Đã gửi vào email của bạn."
+      },
+      {
+            "zh": "这个任务什么时候截止？",
+            "pinyin": "zhè ge rèn wù shén me shí hou jié zhǐ?",
+            "vi": "Nhiệm vụ này hạn chót khi nào?"
+      },
+      {
+            "zh": "下周五之前完成。",
+            "pinyin": "xià zhōu wǔ zhī qián wán chéng.",
+            "vi": "Hoàn thành trước thứ sáu tuần sau."
+      },
+      {
+            "zh": "请提醒我下午三点的会议。",
+            "pinyin": "qǐng tí xǐng wǒ xià wǔ sān diǎn de huì yì.",
+            "vi": "Xin nhắc tôi họp ba giờ chiều."
+      },
+      {
+            "zh": "没问题，我会提醒你。",
+            "pinyin": "méi wèn tí, wǒ huì tí xǐng nǐ.",
+            "vi": "Không vấn đề, tôi sẽ nhắc bạn."
+      },
+      {
+            "zh": "今天的日程安排有变化吗？",
+            "pinyin": "jīn tiān de rì chéng ān pái yǒu biàn huà ma?",
+            "vi": "Lịch trình hôm nay có thay đổi không?"
+      },
+      {
+            "zh": "有，会议推迟到四点。",
+            "pinyin": "yǒu, huì yì tuī chí dào sì diǎn.",
+            "vi": "Có, họp dời đến bốn giờ."
+      },
+      {
+            "zh": "请帮我预订明天的会议室。",
+            "pinyin": "qǐng bāng wǒ yù dìng míng tiān de huì yì shì.",
+            "vi": "Xin giúp tôi đặt phòng họp ngày mai."
+      },
+      {
+            "zh": "已经预订好了，九点到十一点。",
+            "pinyin": "yǐ jīng yù dìng hǎo le, jiǔ diǎn dào shí yī diǎn.",
+            "vi": "Đã đặt xong, từ chín đến mười một giờ."
+      },
+      {
+            "zh": "我需要请假半天，可以吗？",
+            "pinyin": "wǒ xū yào qǐng jià bàn tiān, kě yǐ ma?",
+            "vi": "Tôi cần nghỉ phép nửa ngày, được không?"
+      },
+      {
+            "zh": "可以，请提交请假申请。",
+            "pinyin": "kě yǐ, qǐng tí jiāo qǐng jià shēn qǐng.",
+            "vi": "Được, xin nộp đơn xin nghỉ."
+      },
+      {
+            "zh": "下周出差需要准备什么？",
+            "pinyin": "xià zhōu chū chāi xū yào zhǔn bèi shén me?",
+            "vi": "Tuần sau đi công tác cần chuẩn bị gì?"
+      },
+      {
+            "zh": "准备资料和行程单就行。",
+            "pinyin": "zhǔn bèi zī liào hé xíng chéng dān jiù xíng.",
+            "vi": "Chuẩn bị tài liệu và lịch trình là được."
+      },
+      {
+            "zh": "请把重要事项标记出来。",
+            "pinyin": "qǐng bǎ zhòng yào shì xiàng biāo jì chū lái.",
+            "vi": "Xin đánh dấu những việc quan trọng."
+      },
+      {
+            "zh": "已经标记了，请查看。",
+            "pinyin": "yǐ jīng biāo jì le, qǐng chá kàn.",
+            "vi": "Đã đánh dấu, xin xem."
+      },
+      {
+            "zh": "这个项目需要大家配合完成。",
+            "pinyin": "zhè ge xiàng mù xū yào dà jiā pèi hé wán chéng.",
+            "vi": "Dự án này cần mọi người phối hợp hoàn thành."
+      },
+      {
+            "zh": "我负责数据，你负责报告。",
+            "pinyin": "wǒ fù zé shù jù, nǐ fù zé bào gào.",
+            "vi": "Tôi phụ trách dữ liệu, bạn phụ trách báo cáo."
+      },
+      {
+            "zh": "有问题随时找我沟通。",
+            "pinyin": "yǒu wèn tí suí shí zhǎo wǒ gōu tōng.",
+            "vi": "Có vấn đề cứ tìm tôi giao tiếp bất cứ lúc nào."
+      },
+      {
+            "zh": "没问题，我会及时反馈。",
+            "pinyin": "méi wèn tí, wǒ huì jí shí fǎn kuì.",
+            "vi": "Không vấn đề, tôi sẽ phản hồi kịp thời."
+      },
+      {
+            "zh": "请帮我看一下这个方案。",
+            "pinyin": "qǐng bāng wǒ kàn yī xià zhè ge fāng àn.",
+            "vi": "Xin giúp tôi xem phương án này một chút."
+      },
+      {
+            "zh": "好的，我看完给你意见。",
+            "pinyin": "hǎo de, wǒ kàn wán gěi nǐ yì jiàn.",
+            "vi": "Được, tôi xem xong cho bạn ý kiến."
+      },
+      {
+            "zh": "新同事不太熟悉流程，请带一下。",
+            "pinyin": "xīn tóng shì bú tài shóu xī liú chéng, qǐng dài yī xià.",
+            "vi": "Đồng nghiệp mới chưa quen quy trình, xin kèm một chút."
+      },
+      {
+            "zh": "没问题，我来带他。",
+            "pinyin": "méi wèn tí, wǒ lái dài tā.",
+            "vi": "Không vấn đề, tôi kèm anh ấy."
+      },
+      {
+            "zh": "这个任务比较急，请优先处理。",
+            "pinyin": "zhè ge rèn wù bǐ jiào jí, qǐng yōu xiān chǔ lǐ.",
+            "vi": "Nhiệm vụ này khá gấp, xin ưu tiên xử lý."
+      },
+      {
+            "zh": "我马上处理。",
+            "pinyin": "wǒ mǎ shàng chǔ lǐ.",
+            "vi": "Tôi xử lý ngay."
+      },
+      {
+            "zh": "请把你的部分发到共享文件夹。",
+            "pinyin": "qǐng bǎ nǐ de bù fen fā dào gòng xiǎng wén jiàn jiā.",
+            "vi": "Xin gửi phần của bạn vào thư mục chia sẻ."
+      },
+      {
+            "zh": "已经发了。",
+            "pinyin": "yǐ jīng fā le.",
+            "vi": "Đã gửi."
+      },
+      {
+            "zh": "我们一起讨论一下这个方案吧。",
+            "pinyin": "wǒ men yī qǐ tǎo lùn yī xià zhè ge fāng àn ba.",
+            "vi": "Chúng ta cùng thảo luận phương án này một chút đi."
+      },
+      {
+            "zh": "好的，下午三点怎么样？",
+            "pinyin": "hǎo de, xià wǔ sān diǎn zěn me yàng?",
+            "vi": "Được, chiều ba giờ thế nào?"
+      },
+      {
+            "zh": "请互相支持，共同完成目标。",
+            "pinyin": "qǐng hù xiāng zhī chí, gòng tóng wán chéng mù biāo.",
+            "vi": "Xin hỗ trợ lẫn nhau, cùng hoàn thành mục tiêu."
+      },
+      {
+            "zh": "没问题，我们一起努力。",
+            "pinyin": "méi wèn tí, wǒ men yī qǐ nǔ lì.",
+            "vi": "Không vấn đề, chúng tôi cùng cố gắng."
+      },
+      {
+            "zh": "你那边进度怎么样？",
+            "pinyin": "nǐ nà biān jìn dù zěn me yàng?",
+            "vi": "Tiến độ bên bạn thế nào?"
+      },
+      {
+            "zh": "还行，快完成了。",
+            "pinyin": "hái xíng, kuài wán chéng le.",
+            "vi": "Ổn, sắp xong."
+      },
+      {
+            "zh": "有困难请及时说。",
+            "pinyin": "yǒu kùn nan qǐng jí shí shuō.",
+            "vi": "Có khó khăn xin nói kịp thời."
+      },
+      {
+            "zh": "目前没有，谢谢关心。",
+            "pinyin": "mù qián méi yǒu, xiè xie guān xīn.",
+            "vi": "Hiện không có, cảm ơn quan tâm."
+      },
+      {
+            "zh": "电脑卡了，怎么办？",
+            "pinyin": "diàn nǎo kǎ le, zěn me bàn?",
+            "vi": "Máy tính bị đơ, làm sao?"
+      },
+      {
+            "zh": "先保存文件，再重启试试。",
+            "pinyin": "xiān bǎo cún wén jiàn, zài chóng qǐ shì shi.",
+            "vi": "Lưu file trước, rồi khởi động lại thử."
+      },
+      {
+            "zh": "打印机没墨了，请更换。",
+            "pinyin": "dǎ yìn jī méi mò le, qǐng gēng huàn.",
+            "vi": "Máy in hết mực, xin thay."
+      },
+      {
+            "zh": "我去找IT部门处理。",
+            "pinyin": "wǒ qù zhǎo IT bù mén chǔ lǐ.",
+            "vi": "Tôi đi tìm bộ phận IT xử lý."
+      },
+      {
+            "zh": "请帮我安装这个软件。",
+            "pinyin": "qǐng bāng wǒ ān zhuāng zhè ge ruǎn jiàn.",
+            "vi": "Xin giúp tôi cài phần mềm này."
+      },
+      {
+            "zh": "需要管理员权限，我帮你申请。",
+            "pinyin": "xū yào guǎn lǐ yuán quán xiàn, wǒ bāng nǐ shēn qǐng.",
+            "vi": "Cần quyền quản trị, tôi giúp bạn đề xuất."
+      },
+      {
+            "zh": "网络慢了，是什么原因？",
+            "pinyin": "wǎng luò màn le, shì shén me yuán yīn?",
+            "vi": "Mạng chậm, nguyên nhân gì?"
+      },
+      {
+            "zh": "可能是服务器问题，正在排查。",
+            "pinyin": "kě néng shì fú wù qì wèn tí, zhèng zài pái chá.",
+            "vi": "Có thể là vấn đề server, đang kiểm tra."
+      },
+      {
+            "zh": "请把文件保存到共享盘。",
+            "pinyin": "qǐng bǎ wén jiàn bǎo cún dào gòng xiǎng pán.",
+            "vi": "Xin lưu file vào ổ chia sẻ."
+      },
+      {
+            "zh": "已经保存了。",
+            "pinyin": "yǐ jīng bǎo cún le.",
+            "vi": "Đã lưu."
+      },
+      {
+            "zh": "投影仪连不上电脑。",
+            "pinyin": "tóu yǐng yí lián bú shàng diàn nǎo.",
+            "vi": "Máy chiếu không kết nối được máy tính."
+      },
+      {
+            "zh": "检查一下线，或者换个接口。",
+            "pinyin": "jiǎn chá yī xià xiàn, huò zhě huàn ge jiē kǒu.",
+            "vi": "Kiểm tra dây một chút, hoặc đổi cổng."
+      },
+      {
+            "zh": "请定期清理电脑垃圾文件。",
+            "pinyin": "qǐng dìng qī qīng lǐ diàn nǎo lā jī wén jiàn.",
+            "vi": "Xin dọn file rác máy tính định kỳ."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "这个软件需要更新吗？",
+            "pinyin": "zhè ge ruǎn jiàn xū yào gēng xīn ma?",
+            "vi": "Phần mềm này có cần cập nhật không?"
+      },
+      {
+            "zh": "需要，更新后功能更稳定。",
+            "pinyin": "xū yào, gēng xīn hòu gōng néng gèng wěn dìng.",
+            "vi": "Cần, sau cập nhật chức năng ổn định hơn."
+      },
+      {
+            "zh": "请帮我设置打印机。",
+            "pinyin": "qǐng bāng wǒ shè zhì dǎ yìn jī.",
+            "vi": "Xin giúp tôi cài đặt máy in."
+      },
+      {
+            "zh": "没问题，我帮你设置。",
+            "pinyin": "méi wèn tí, wǒ bāng nǐ shè zhì.",
+            "vi": "Không vấn đề, tôi giúp bạn cài đặt."
+      },
+      {
+            "zh": "电脑密码忘记了，怎么办？",
+            "pinyin": "diàn nǎo mì mǎ wàng jì le, zěn me bàn?",
+            "vi": "Quên mật khẩu máy tính, làm sao?"
+      },
+      {
+            "zh": "联系IT部门重置。",
+            "pinyin": "lián xì IT bù mén chóng zhì.",
+            "vi": "Liên hệ bộ phận IT đặt lại."
+      },
+      {
+            "zh": "这个任务进展怎么样？",
+            "pinyin": "zhè ge rèn wù jìn zhǎn zěn me yàng?",
+            "vi": "Tiến triển nhiệm vụ này thế nào?"
+      },
+      {
+            "zh": "已经完成百分之八十了。",
+            "pinyin": "yǐ jīng wán chéng bǎi fēn zhī bā shí le.",
+            "vi": "Đã hoàn thành 80%."
+      },
+      {
+            "zh": "请加快进度，客户催了。",
+            "pinyin": "qǐng jiā kuài jìn dù, kè hù cuī le.",
+            "vi": "Xin tăng tốc tiến độ, khách hàng thúc rồi."
+      },
+      {
+            "zh": "我尽量今天完成。",
+            "pinyin": "wǒ jǐn liàng jīn tiān wán chéng.",
+            "vi": "Tôi cố gắng hoàn thành hôm nay."
+      },
+      {
+            "zh": "有没有需要帮忙的地方？",
+            "pinyin": "yǒu méi yǒu xū yào bāng máng de dì fang?",
+            "vi": "Có chỗ nào cần giúp không?"
+      },
+      {
+            "zh": "暂时没有，谢谢。",
+            "pinyin": "zàn shí méi yǒu, xiè xie.",
+            "vi": "Tạm thời không, cảm ơn."
+      },
+      {
+            "zh": "请把进度更新到系统里。",
+            "pinyin": "qǐng bǎ jìn dù gēng xīn dào xì tǒng lǐ.",
+            "vi": "Xin cập nhật tiến độ vào hệ thống."
+      },
+      {
+            "zh": "已经更新了。",
+            "pinyin": "yǐ jīng gēng xīn le.",
+            "vi": "Đã cập nhật."
+      },
+      {
+            "zh": "这个项目下周必须完成。",
+            "pinyin": "zhè ge xiàng mù xià zhōu bì xū wán chéng.",
+            "vi": "Dự án này tuần sau phải hoàn thành."
+      },
+      {
+            "zh": "没问题，我们会按时完成。",
+            "pinyin": "méi wèn tí, wǒ men huì àn shí wán chéng.",
+            "vi": "Không vấn đề, chúng tôi sẽ hoàn thành đúng hạn."
+      },
+      {
+            "zh": "请检查一下数据是否准确。",
+            "pinyin": "qǐng jiǎn chá yī xià shù jù shì fǒu zhǔn què.",
+            "vi": "Xin kiểm tra dữ liệu có chính xác không."
+      },
+      {
+            "zh": "已经检查了，没有问题。",
+            "pinyin": "yǐ jīng jiǎn chá le, méi yǒu wèn tí.",
+            "vi": "Đã kiểm tra, không có vấn đề."
+      },
+      {
+            "zh": "客户反馈需要修改方案。",
+            "pinyin": "kè hù fǎn kuì xū yào xiū gǎi fāng àn.",
+            "vi": "Khách hàng phản hồi cần sửa phương án."
+      },
+      {
+            "zh": "我马上修改，尽快发给你。",
+            "pinyin": "wǒ mǎ shàng xiū gǎi, jǐn kuài fā gěi nǐ.",
+            "vi": "Tôi sửa ngay, gửi cho bạn sớm nhất."
+      },
+      {
+            "zh": "请把完成情况汇报一下。",
+            "pinyin": "qǐng bǎ wán chéng qíng kuàng huì bào yī xià.",
+            "vi": "Xin báo cáo tình hình hoàn thành một chút."
+      },
+      {
+            "zh": "主要任务已完成，细节还在调整。",
+            "pinyin": "zhǔ yào rèn wù yǐ wán chéng, xì jié hái zài tiáo zhěng.",
+            "vi": "Nhiệm vụ chính đã xong, chi tiết đang điều chỉnh."
+      },
+      {
+            "zh": "如果有延误请及时通知。",
+            "pinyin": "rú guǒ yǒu yán wu qǐng jí shí tōng zhī.",
+            "vi": "Nếu có chậm trễ xin thông báo kịp thời."
+      },
+      {
+            "zh": "目前没有延误。",
+            "pinyin": "mù qián méi yǒu yán wu.",
+            "vi": "Hiện không có chậm trễ."
+      },
+      {
+            "zh": "请把工作总结写一下。",
+            "pinyin": "qǐng bǎ gōng zuò zǒng jié xiě yī xià.",
+            "vi": "Xin viết tổng kết công việc một chút."
+      },
+      {
+            "zh": "写好了，我发到邮箱。",
+            "pinyin": "xiě hǎo le, wǒ fā dào yóu xiāng.",
+            "vi": "Viết xong, tôi gửi vào email."
+      },
+      {
+            "zh": "客户来了，请带他到会议室。",
+            "pinyin": "kè hù lái le, qǐng dài tā dào huì yì shì.",
+            "vi": "Khách đến rồi, xin dẫn anh ấy đến phòng họp."
+      },
+      {
+            "zh": "好的，我马上去。",
+            "pinyin": "hǎo de, wǒ mǎ shàng qù.",
+            "vi": "Được, tôi đi ngay."
+      },
+      {
+            "zh": "请准备茶水和资料。",
+            "pinyin": "qǐng zhǔn bèi chá shuǐ hé zī liào.",
+            "vi": "Xin chuẩn bị nước trà và tài liệu."
+      },
+      {
+            "zh": "已经准备好了。",
+            "pinyin": "yǐ jīng zhǔn bèi hǎo le.",
+            "vi": "Đã chuẩn bị xong."
+      },
+      {
+            "zh": "客户问报价，怎么回复？",
+            "pinyin": "kè hù wèn bào jià, zěn me huí fù?",
+            "vi": "Khách hỏi báo giá, trả lời thế nào?"
+      },
+      {
+            "zh": "先发标准报价，再确认细节。",
+            "pinyin": "xiān fā biāo zhǔn bào jià, zài què rèn xì jié.",
+            "vi": "Gửi báo giá tiêu chuẩn trước, rồi xác nhận chi tiết."
+      },
+      {
+            "zh": "请把客户联系方式发给我。",
+            "pinyin": "qǐng bǎ kè hù lián xì fāng shì fā gěi wǒ.",
+            "vi": "Xin gửi thông tin liên hệ khách hàng cho tôi."
+      },
+      {
+            "zh": "已经发到你邮箱了。",
+            "pinyin": "yǐ jīng fā dào nǐ yóu xiāng le.",
+            "vi": "Đã gửi vào email của bạn."
+      },
+      {
+            "zh": "客户要求改方案，怎么办？",
+            "pinyin": "kè hù yāo qiú gǎi fāng àn, zěn me bàn?",
+            "vi": "Khách yêu cầu sửa phương án, làm sao?"
+      },
+      {
+            "zh": "先了解具体需求，再调整。",
+            "pinyin": "xiān liǎo jiě jù tǐ xū qiú, zài tiáo zhěng.",
+            "vi": "Trước hiểu yêu cầu cụ thể, rồi điều chỉnh."
+      },
+      {
+            "zh": "请跟进一下这个客户的订单。",
+            "pinyin": "qǐng gēn jìn yī xià zhè ge kè hù de dìng dān.",
+            "vi": "Xin theo dõi đơn hàng của khách này một chút."
+      },
+      {
+            "zh": "我已经联系了，明天回复。",
+            "pinyin": "wǒ yǐ jīng lián xì le, míng tiān huí fù.",
+            "vi": "Tôi đã liên hệ, ngày mai trả lời."
+      },
+      {
+            "zh": "客户投诉了，怎么处理？",
+            "pinyin": "kè hù tóu sù le, zěn me chǔ lǐ?",
+            "vi": "Khách khiếu nại, xử lý thế nào?"
+      },
+      {
+            "zh": "先道歉，然后了解情况，尽快解决。",
+            "pinyin": "xiān dào qiàn, rán hòu liǎo jiě qíng kuàng, jǐn kuài jiě jué.",
+            "vi": "Xin lỗi trước, rồi hiểu tình hình, giải quyết sớm nhất."
+      },
+      {
+            "zh": "请把会议安排通知客户。",
+            "pinyin": "qǐng bǎ huì yì ān pái tōng zhī kè hù.",
+            "vi": "Xin thông báo lịch họp cho khách."
+      },
+      {
+            "zh": "已经通知了。",
+            "pinyin": "yǐ jīng tōng zhī le.",
+            "vi": "Đã thông báo."
+      },
+      {
+            "zh": "客户想参观工厂，怎么安排？",
+            "pinyin": "kè hù xiǎng cān guān gōng chǎng, zěn me ān pái?",
+            "vi": "Khách muốn tham quan nhà máy, sắp xếp thế nào?"
+      },
+      {
+            "zh": "先确认时间，再联系生产部门。",
+            "pinyin": "xiān què rèn shí jiān, zài lián xì shēng chǎn bù mén.",
+            "vi": "Xác nhận thời gian trước, rồi liên hệ bộ phận sản xuất."
+      },
+      {
+            "zh": "请记录客户的需求。",
+            "pinyin": "qǐng jì lù kè hù de xū qiú.",
+            "vi": "Xin ghi lại yêu cầu của khách."
+      },
+      {
+            "zh": "已经记录了，会后整理。",
+            "pinyin": "yǐ jīng jì lù le, huì hòu zhěng lǐ.",
+            "vi": "Đã ghi, sau họp sắp xếp."
+      },
+      {
+            "zh": "请保持办公桌整洁。",
+            "pinyin": "qǐng bǎo chí bàn gōng zhuō zhěng jié.",
+            "vi": "Xin giữ bàn làm việc gọn gàng."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "下班后请关闭电脑和灯。",
+            "pinyin": "xià bān hòu qǐng guān bì diàn nǎo hé dēng.",
+            "vi": "Sau tan ca xin tắt máy tính và đèn."
+      },
+      {
+            "zh": "没问题。",
+            "pinyin": "méi wèn tí.",
+            "vi": "Không vấn đề."
+      },
+      {
+            "zh": "请不要在办公室大声说话。",
+            "pinyin": "qǐng bú yào zài bàn gōng shì dà shēng shuō huà.",
+            "vi": "Xin đừng nói to trong văn phòng."
+      },
+      {
+            "zh": "我会注意音量。",
+            "pinyin": "wǒ huì zhù yì yīn liàng.",
+            "vi": "Tôi sẽ chú ý âm lượng."
+      },
+      {
+            "zh": "重要文件请及时存档。",
+            "pinyin": "zhòng yào wén jiàn qǐng jí shí cún dàng.",
+            "vi": "File quan trọng xin lưu trữ kịp thời."
+      },
+      {
+            "zh": "已经存档了。",
+            "pinyin": "yǐ jīng cún dàng le.",
+            "vi": "Đã lưu trữ."
+      },
+      {
+            "zh": "请遵守公司保密规定。",
+            "pinyin": "qǐng zūn shǒu gōng sī bǎo mì guī dìng.",
+            "vi": "Xin tuân thủ quy định bảo mật công ty."
+      },
+      {
+            "zh": "我会严格遵守。",
+            "pinyin": "wǒ huì yán gé zūn shǒu.",
+            "vi": "Tôi sẽ tuân thủ nghiêm ngặt."
+      },
+      {
+            "zh": "访客需要登记才能进入。",
+            "pinyin": "fǎng kè xū yào dēng jì cái néng jìn rù.",
+            "vi": "Khách cần đăng ký mới vào được."
+      },
+      {
+            "zh": "我已经登记了。",
+            "pinyin": "wǒ yǐ jīng dēng jì le.",
+            "vi": "Tôi đã đăng ký."
+      },
+      {
+            "zh": "请不要在工作时间处理私事。",
+            "pinyin": "qǐng bú yào zài gōng zuò shí jiān chǔ lǐ sī shì.",
+            "vi": "Xin đừng xử lý việc riêng trong giờ làm việc."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "紧急情况请走安全通道。",
+            "pinyin": "jǐn jí qíng kuàng qǐng zǒu ān quán tōng dào.",
+            "vi": "Trường hợp khẩn cấp xin đi lối thoát an toàn."
+      },
+      {
+            "zh": "我知道了。",
+            "pinyin": "wǒ zhī dào le.",
+            "vi": "Tôi biết rồi."
+      },
+      {
+            "zh": "请定期更换电脑密码。",
+            "pinyin": "qǐng dìng qī gēng huàn diàn nǎo mì mǎ.",
+            "vi": "Xin đổi mật khẩu máy tính định kỳ."
+      },
+      {
+            "zh": "我会记得的。",
+            "pinyin": "wǒ huì jì de de.",
+            "vi": "Tôi sẽ nhớ."
+      },
+      {
+            "zh": "办公用品请向行政申请。",
+            "pinyin": "bàn gōng yòng pǐn qǐng xiàng xíng zhèng shēn qǐng.",
+            "vi": "Đồ dùng văn phòng xin đề xuất với hành chính."
+      },
+      {
+            "zh": "好的，我去申请。",
+            "pinyin": "hǎo de, wǒ qù shēn qǐng.",
+            "vi": "Được, tôi đi đề xuất."
+      },
+      {
+            "zh": "早上好，今天先处理邮件再开会。",
+            "pinyin": "zǎo shang hǎo, jīn tiān xiān chǔ lǐ yóu jiàn zài kāi huì.",
+            "vi": "Chào buổi sáng, hôm nay xử lý email trước rồi họp."
+      },
+      {
+            "zh": "请准备下午两点的会议材料。",
+            "pinyin": "qǐng zhǔn bèi xià wǔ liǎng diǎn de huì yì cái liào.",
+            "vi": "Xin chuẩn bị tài liệu họp hai giờ chiều."
+      },
+      {
+            "zh": "这份文件请发到我邮箱。",
+            "pinyin": "zhè fèn wén jiàn qǐng fā dào wǒ yóu xiāng.",
+            "vi": "File này xin gửi vào email của tôi."
+      },
+      {
+            "zh": "明天客户来访，请安排接待。",
+            "pinyin": "míng tiān kè hù lái fǎng, qǐng ān pái jiē dài.",
+            "vi": "Ngày mai khách đến, xin sắp xếp tiếp đón."
+      },
+      {
+            "zh": "这个项目需要大家配合完成。",
+            "pinyin": "zhè ge xiàng mù xū yào dà jiā pèi hé wán chéng.",
+            "vi": "Dự án này cần mọi người phối hợp hoàn thành."
+      },
+      {
+            "zh": "电脑卡了，先保存再重启。",
+            "pinyin": "diàn nǎo kǎ le, xiān bǎo cún zài chóng qǐ.",
+            "vi": "Máy tính đơ, lưu trước rồi khởi động lại."
+      },
+      {
+            "zh": "请加快进度，客户在催。",
+            "pinyin": "qǐng jiā kuài jìn dù, kè hù zài cuī.",
+            "vi": "Xin tăng tốc tiến độ, khách đang thúc."
+      },
+      {
+            "zh": "客户来了，请带到会议室。",
+            "pinyin": "kè hù lái le, qǐng dài dào huì yì shì.",
+            "vi": "Khách đến rồi, xin dẫn đến phòng họp."
+      },
+      {
+            "zh": "请保持办公桌整洁。",
+            "pinyin": "qǐng bǎo chí bàn gōng zhuō zhěng jié.",
+            "vi": "Xin giữ bàn làm việc gọn gàng."
+      },
+      {
+            "zh": "会议纪要我来记录，会后发群里。",
+            "pinyin": "huì yì jì yào wǒ lái jì lù, huì hòu fā qún lǐ.",
+            "vi": "Biên bản họp tôi ghi, sau họp gửi nhóm."
+      },
+      {
+            "zh": "请把资料存到共享文件夹。",
+            "pinyin": "qǐng bǎ zī liào cún dào gòng xiǎng wén jiàn jiā.",
+            "vi": "Xin lưu tài liệu vào thư mục chia sẻ."
+      },
+      {
+            "zh": "我下午有事，会议可以改时间吗？",
+            "pinyin": "wǒ xià wǔ yǒu shì, huì yì kě yǐ gǎi shí jiān ma?",
+            "vi": "Chiều tôi có việc, họp có thể đổi giờ không?"
+      },
+      {
+            "zh": "新同事请跟着学习流程。",
+            "pinyin": "xīn tóng shì qǐng gēn zhe xué xí liú chéng.",
+            "vi": "Đồng nghiệp mới xin theo học quy trình."
+      },
+      {
+            "zh": "打印机缺纸了，我去加。",
+            "pinyin": "dǎ yìn jī quē zhǐ le, wǒ qù jiā.",
+            "vi": "Máy in hết giấy, tôi đi thêm."
+      },
+      {
+            "zh": "这个任务下周必须完成。",
+            "pinyin": "zhè ge rèn wù xià zhōu bì xū wán chéng.",
+            "vi": "Nhiệm vụ này tuần sau phải hoàn thành."
+      },
+      {
+            "zh": "请跟进客户订单情况。",
+            "pinyin": "qǐng gēn jìn kè hù dìng dān qíng kuàng.",
+            "vi": "Xin theo dõi tình hình đơn hàng khách."
+      },
+      {
+            "zh": "下班前请关闭电脑。",
+            "pinyin": "xià bān qián qǐng guān bì diàn nǎo.",
+            "vi": "Trước khi tan ca xin tắt máy tính."
+      },
+      {
+            "zh": "请把进度更新到系统。",
+            "pinyin": "qǐng bǎ jìn dù gēng xīn dào xì tǒng.",
+            "vi": "Xin cập nhật tiến độ vào hệ thống."
+      },
+      {
+            "zh": "有问题随时沟通。",
+            "pinyin": "yǒu wèn tí suí shí gōu tōng.",
+            "vi": "Có vấn đề cứ giao tiếp bất cứ lúc nào."
+      },
+      {
+            "zh": "今天工作顺利，大家辛苦了。",
+            "pinyin": "jīn tiān gōng zuò shùn lì, dà jiā xīn kǔ le.",
+            "vi": "Hôm nay công việc thuận lợi, mọi người vất vả rồi."
+      }
+]
+  },
+  "VAN_PHONG-2": {
+    title: "💼 Văn phòng công sở phần 2",
+    color: "#1565c0",
+    sections: [
+      {
+            "name": "Tình huống tổng hợp 1",
+            "start": 0
+      },
+      {
+            "name": "Tình huống tổng hợp 2",
+            "start": 20
+      },
+      {
+            "name": "Tình huống tổng hợp 3",
+            "start": 40
+      },
+      {
+            "name": "Tình huống tổng hợp 4",
+            "start": 60
+      },
+      {
+            "name": "Tình huống tổng hợp 5",
+            "start": 80
+      },
+      {
+            "name": "Tình huống tổng hợp 6",
+            "start": 100
+      },
+      {
+            "name": "Tình huống tổng hợp 7",
+            "start": 120
+      },
+      {
+            "name": "Tình huống tổng hợp 8",
+            "start": 140
+      },
+      {
+            "name": "Tình huống tổng hợp 9",
+            "start": 160
+      },
+      {
+            "name": "Tình huống tổng hợp 10",
+            "start": 180
+      }
+],
+    sentences: [
+      {
+            "zh": "早上好，今天有什么工作安排？",
+            "pinyin": "zǎo shang hǎo, jīn tiān yǒu shén me gōng zuò ān pái?",
+            "vi": "Chào buổi sáng, hôm nay có sắp xếp công việc gì?"
+      },
+      {
+            "zh": "我先处理邮件，然后准备会议材料。",
+            "pinyin": "wǒ xiān chǔ lǐ yóu jiàn, rán hòu zhǔn bèi huì yì cái liào.",
+            "vi": "Tôi xử lý email trước, rồi chuẩn bị tài liệu họp."
+      },
+      {
+            "zh": "今天的任务清单发到群里了吗？",
+            "pinyin": "jīn tiān de rèn wù qīng dān fā dào qún lǐ le ma?",
+            "vi": "Danh sách nhiệm vụ hôm nay đã gửi vào nhóm chưa?"
+      },
+      {
+            "zh": "已经发了，请大家查看一下。",
+            "pinyin": "yǐ jīng fā le, qǐng dà jiā chá kàn yī xià.",
+            "vi": "Đã gửi rồi, xin mọi người xem một chút."
+      },
+      {
+            "zh": "你昨天的报告做完了吗？",
+            "pinyin": "nǐ zuó tiān de bào gào zuò wán le ma?",
+            "vi": "Báo cáo hôm qua của bạn làm xong chưa?"
+      },
+      {
+            "zh": "做完了，已经发给领导了。",
+            "pinyin": "zuò wán le, yǐ jīng fā gěi lǐng dǎo le.",
+            "vi": "Làm xong rồi, đã gửi cho lãnh đạo."
+      },
+      {
+            "zh": "今天需要加班吗？",
+            "pinyin": "jīn tiān xū yào jiā bān ma?",
+            "vi": "Hôm nay có cần tăng ca không?"
+      },
+      {
+            "zh": "可能需要，看下午的进度。",
+            "pinyin": "kě néng xū yào, kàn xià wǔ de jìn dù.",
+            "vi": "Có thể cần, xem tiến độ buổi chiều."
+      },
+      {
+            "zh": "请把今天的工作重点告诉我。",
+            "pinyin": "qǐng bǎ jīn tiān de gōng zuò zhòng diǎn gào sù wǒ.",
+            "vi": "Xin nói cho tôi trọng điểm công việc hôm nay."
+      },
+      {
+            "zh": "重点是完成季度报告和客户资料。",
+            "pinyin": "zhòng diǎn shì wán chéng jì dù bào gào hé kè hù zī liào.",
+            "vi": "Trọng điểm là hoàn thành báo cáo quý và tài liệu khách hàng."
+      },
+      {
+            "zh": "办公室空调温度合适吗？",
+            "pinyin": "bàn gōng shì kōng tiáo wēn dù hé shì ma?",
+            "vi": "Nhiệt độ điều hòa văn phòng có hợp lý không?"
+      },
+      {
+            "zh": "有点冷，我调高一点。",
+            "pinyin": "yǒu diǎn lěng, wǒ tiáo gāo yī diǎn.",
+            "vi": "Hơi lạnh, tôi chỉnh cao một chút."
+      },
+      {
+            "zh": "请帮我打印这份文件。",
+            "pinyin": "qǐng bāng wǒ dǎ yìn zhè fèn wén jiàn.",
+            "vi": "Xin giúp tôi in file này."
+      },
+      {
+            "zh": "打印机缺纸了，我去加一下。",
+            "pinyin": "dǎ yìn jī quē zhǐ le, wǒ qù jiā yī xià.",
+            "vi": "Máy in hết giấy, tôi đi thêm một chút."
+      },
+      {
+            "zh": "今天中午一起吃饭吗？",
+            "pinyin": "jīn tiān zhōng wǔ yī qǐ chī fàn ma?",
+            "vi": "Trưa nay cùng ăn cơm không?"
+      },
+      {
+            "zh": "可以，我先把这个文件发完。",
+            "pinyin": "kě yǐ, wǒ xiān bǎ zhè ge wén jiàn fā wán.",
+            "vi": "Được, tôi gửi xong file này trước."
+      },
+      {
+            "zh": "你有没有看到我放在桌上的资料？",
+            "pinyin": "nǐ yǒu méi yǒu kàn dào wǒ fàng zài zhuō shàng de zī liào?",
+            "vi": "Bạn có thấy tài liệu tôi để trên bàn không?"
+      },
+      {
+            "zh": "看到了，我帮你收起来了。",
+            "pinyin": "kàn dào le, wǒ bāng nǐ shōu qǐ lái le.",
+            "vi": "Thấy rồi, tôi giúp bạn cất đi."
+      },
+      {
+            "zh": "下班前请把电脑关机。",
+            "pinyin": "xià bān qián qǐng bǎ diàn nǎo guān jī.",
+            "vi": "Trước khi tan ca xin tắt máy tính."
+      },
+      {
+            "zh": "我会记得的，谢谢提醒。",
+            "pinyin": "wǒ huì jì de de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ nhớ, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "今天下午两点有部门会议。",
+            "pinyin": "jīn tiān xià wǔ liǎng diǎn yǒu bù mén huì yì.",
+            "vi": "Chiều nay hai giờ có họp bộ phận."
+      },
+      {
+            "zh": "请准备一下会议材料。",
+            "pinyin": "qǐng zhǔn bèi yī xià huì yì cái liào.",
+            "vi": "Xin chuẩn bị tài liệu họp một chút."
+      },
+      {
+            "zh": "会议纪要谁来记录？",
+            "pinyin": "huì yì jì yào shuí lái jì lù?",
+            "vi": "Ai ghi biên bản họp?"
+      },
+      {
+            "zh": "我来记录，会后发给大家。",
+            "pinyin": "wǒ lái jì lù, huì hòu fā gěi dà jiā.",
+            "vi": "Tôi ghi, sau họp gửi mọi người."
+      },
+      {
+            "zh": "请大家准时参加会议。",
+            "pinyin": "qǐng dà jiā zhǔn shí cān jiā huì yì.",
+            "vi": "Xin mọi người tham gia họp đúng giờ."
+      },
+      {
+            "zh": "我可能晚到几分钟，先开始吧。",
+            "pinyin": "wǒ kě néng wǎn dào jǐ fēn zhōng, xiān kāi shǐ ba.",
+            "vi": "Tôi có thể đến muộn vài phút, bắt đầu trước đi."
+      },
+      {
+            "zh": "这个项目的进度怎么样？",
+            "pinyin": "zhè ge xiàng mù de jìn dù zěn me yàng?",
+            "vi": "Tiến độ dự án này thế nào?"
+      },
+      {
+            "zh": "目前完成百分之七十，下周可以完成。",
+            "pinyin": "mù qián wán chéng bǎi fēn zhī qī shí, xià zhōu kě yǐ wán chéng.",
+            "vi": "Hiện hoàn thành 70%, tuần sau có thể xong."
+      },
+      {
+            "zh": "请汇报一下本月的工作情况。",
+            "pinyin": "qǐng huì bào yī xià běn yuè de gōng zuò qíng kuàng.",
+            "vi": "Xin báo cáo tình hình công việc tháng này."
+      },
+      {
+            "zh": "本月完成了三个主要项目。",
+            "pinyin": "běn yuè wán chéng le sān ge zhǔ yào xiàng mù.",
+            "vi": "Tháng này hoàn thành ba dự án chính."
+      },
+      {
+            "zh": "有没有遇到什么困难？",
+            "pinyin": "yǒu méi yǒu yù dào shén me kùn nan?",
+            "vi": "Có gặp khó khăn gì không?"
+      },
+      {
+            "zh": "客户资料收集有点慢，正在跟进。",
+            "pinyin": "kè hù zī liào shōu jí yǒu diǎn màn, zhèng zài gēn jìn.",
+            "vi": "Thu thập tài liệu khách hàng hơi chậm, đang theo dõi."
+      },
+      {
+            "zh": "请把会议安排发到日历里。",
+            "pinyin": "qǐng bǎ huì yì ān pái fā dào rì lì lǐ.",
+            "vi": "Xin gửi lịch họp vào lịch."
+      },
+      {
+            "zh": "已经发了，请大家确认。",
+            "pinyin": "yǐ jīng fā le, qǐng dà jiā què rèn.",
+            "vi": "Đã gửi, xin mọi người xác nhận."
+      },
+      {
+            "zh": "这个方案需要领导审批吗？",
+            "pinyin": "zhè ge fāng àn xū yào lǐng dǎo shěn pī ma?",
+            "vi": "Phương án này có cần lãnh đạo phê duyệt không?"
+      },
+      {
+            "zh": "需要，我已经提交了。",
+            "pinyin": "xū yào, wǒ yǐ jīng tí jiāo le.",
+            "vi": "Cần, tôi đã nộp."
+      },
+      {
+            "zh": "会后请把决议发到群里。",
+            "pinyin": "huì hòu qǐng bǎ jué yì fā dào qún lǐ.",
+            "vi": "Sau họp xin gửi nghị quyết vào nhóm."
+      },
+      {
+            "zh": "没问题，我整理好就发。",
+            "pinyin": "méi wèn tí, wǒ zhěng lǐ hǎo jiù fā.",
+            "vi": "Không vấn đề, tôi sắp xếp xong là gửi."
+      },
+      {
+            "zh": "下周的会议改到周三可以吗？",
+            "pinyin": "xià zhōu de huì yì gǎi dào zhōu sān kě yǐ ma?",
+            "vi": "Họp tuần sau đổi sang thứ tư được không?"
+      },
+      {
+            "zh": "可以，我通知大家。",
+            "pinyin": "kě yǐ, wǒ tōng zhī dà jiā.",
+            "vi": "Được, tôi thông báo mọi người."
+      },
+      {
+            "zh": "请把这份文件发到我邮箱。",
+            "pinyin": "qǐng bǎ zhè fèn wén jiàn fā dào wǒ yóu xiāng.",
+            "vi": "Xin gửi file này vào email của tôi."
+      },
+      {
+            "zh": "已经发了，请查收。",
+            "pinyin": "yǐ jīng fā le, qǐng chá shōu.",
+            "vi": "Đã gửi, xin kiểm tra."
+      },
+      {
+            "zh": "邮件附件打不开怎么办？",
+            "pinyin": "yóu jiàn fù jiàn dǎ bù kāi zěn me bàn?",
+            "vi": "File đính kèm email không mở được thì làm sao?"
+      },
+      {
+            "zh": "可能是格式问题，我重新发一份。",
+            "pinyin": "kě néng shì gé shì wèn tí, wǒ chóng xīn fā yī fèn.",
+            "vi": "Có thể là vấn đề định dạng, tôi gửi lại một bản."
+      },
+      {
+            "zh": "请把合同扫描后发给我。",
+            "pinyin": "qǐng bǎ hé tong sǎo miáo hòu fā gěi wǒ.",
+            "vi": "Xin scan hợp đồng rồi gửi cho tôi."
+      },
+      {
+            "zh": "好的，我马上扫描。",
+            "pinyin": "hǎo de, wǒ mǎ shàng sǎo miáo.",
+            "vi": "Được, tôi scan ngay."
+      },
+      {
+            "zh": "这份资料需要存档吗？",
+            "pinyin": "zhè fèn zī liào xū yào cún dàng ma?",
+            "vi": "Tài liệu này có cần lưu trữ không?"
+      },
+      {
+            "zh": "需要，请放到共享文件夹里。",
+            "pinyin": "xū yào, qǐng fàng dào gòng xiǎng wén jiàn jiā lǐ.",
+            "vi": "Cần, xin để vào thư mục chia sẻ."
+      },
+      {
+            "zh": "请把表格填写完整再发。",
+            "pinyin": "qǐng bǎ biǎo gé tián xiě wán zhěng zài fā.",
+            "vi": "Xin điền đầy đủ bảng rồi gửi."
+      },
+      {
+            "zh": "已经填好了，请查收。",
+            "pinyin": "yǐ jīng tián hǎo le, qǐng chá shōu.",
+            "vi": "Đã điền xong, xin kiểm tra."
+      },
+      {
+            "zh": "客户要求提供最新报价单。",
+            "pinyin": "kè hù yāo qiú tí gōng zuì xīn bào jià dān.",
+            "vi": "Khách hàng yêu cầu cung cấp bảng báo giá mới nhất."
+      },
+      {
+            "zh": "我正在准备，下午发给你。",
+            "pinyin": "wǒ zhèng zài zhǔn bèi, xià wǔ fā gěi nǐ.",
+            "vi": "Tôi đang chuẩn bị, chiều gửi cho bạn."
+      },
+      {
+            "zh": "请把会议记录整理成文档。",
+            "pinyin": "qǐng bǎ huì yì jì lù zhěng lǐ chéng wén dàng.",
+            "vi": "Xin sắp xếp biên bản họp thành tài liệu."
+      },
+      {
+            "zh": "整理好了，我发到群里。",
+            "pinyin": "zhěng lǐ hǎo le, wǒ fā dào qún lǐ.",
+            "vi": "Sắp xếp xong, tôi gửi vào nhóm."
+      },
+      {
+            "zh": "这个文件版本不对，请发最新的。",
+            "pinyin": "zhè ge wén jiàn bǎn běn bú duì, qǐng fā zuì xīn de.",
+            "vi": "Phiên bản file này không đúng, xin gửi bản mới nhất."
+      },
+      {
+            "zh": "抱歉，我重新发一份。",
+            "pinyin": "bào qiàn, wǒ chóng xīn fā yī fèn.",
+            "vi": "Xin lỗi, tôi gửi lại một bản."
+      },
+      {
+            "zh": "请把资料备份到云端。",
+            "pinyin": "qǐng bǎ zī liào bèi fèn dào yún duān.",
+            "vi": "Xin sao lưu tài liệu lên đám mây."
+      },
+      {
+            "zh": "已经备份了。",
+            "pinyin": "yǐ jīng bèi fèn le.",
+            "vi": "Đã sao lưu."
+      },
+      {
+            "zh": "打印时请双面打印，节约纸张。",
+            "pinyin": "dǎ yìn shí qǐng shuāng miàn dǎ yìn, jié yuē zhǐ zhāng.",
+            "vi": "Khi in xin in hai mặt, tiết kiệm giấy."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "明天上午有客户来访。",
+            "pinyin": "míng tiān shàng wǔ yǒu kè hù lái fǎng.",
+            "vi": "Sáng mai có khách hàng đến thăm."
+      },
+      {
+            "zh": "请安排会议室和接待。",
+            "pinyin": "qǐng ān pái huì yì shì hé jiē dài.",
+            "vi": "Xin sắp xếp phòng họp và tiếp đón."
+      },
+      {
+            "zh": "我下午有事，可以调一下会议吗？",
+            "pinyin": "wǒ xià wǔ yǒu shì, kě yǐ tiáo yī xià huì yì ma?",
+            "vi": "Chiều tôi có việc, có thể đổi họp một chút không?"
+      },
+      {
+            "zh": "可以，我看看大家的时间。",
+            "pinyin": "kě yǐ, wǒ kàn kan dà jiā de shí jiān.",
+            "vi": "Được, tôi xem thời gian mọi người."
+      },
+      {
+            "zh": "请把下周的行程发给我。",
+            "pinyin": "qǐng bǎ xià zhōu de xíng chéng fā gěi wǒ.",
+            "vi": "Xin gửi lịch trình tuần sau cho tôi."
+      },
+      {
+            "zh": "已经发到你邮箱了。",
+            "pinyin": "yǐ jīng fā dào nǐ yóu xiāng le.",
+            "vi": "Đã gửi vào email của bạn."
+      },
+      {
+            "zh": "这个任务什么时候截止？",
+            "pinyin": "zhè ge rèn wù shén me shí hou jié zhǐ?",
+            "vi": "Nhiệm vụ này hạn chót khi nào?"
+      },
+      {
+            "zh": "下周五之前完成。",
+            "pinyin": "xià zhōu wǔ zhī qián wán chéng.",
+            "vi": "Hoàn thành trước thứ sáu tuần sau."
+      },
+      {
+            "zh": "请提醒我下午三点的会议。",
+            "pinyin": "qǐng tí xǐng wǒ xià wǔ sān diǎn de huì yì.",
+            "vi": "Xin nhắc tôi họp ba giờ chiều."
+      },
+      {
+            "zh": "没问题，我会提醒你。",
+            "pinyin": "méi wèn tí, wǒ huì tí xǐng nǐ.",
+            "vi": "Không vấn đề, tôi sẽ nhắc bạn."
+      },
+      {
+            "zh": "今天的日程安排有变化吗？",
+            "pinyin": "jīn tiān de rì chéng ān pái yǒu biàn huà ma?",
+            "vi": "Lịch trình hôm nay có thay đổi không?"
+      },
+      {
+            "zh": "有，会议推迟到四点。",
+            "pinyin": "yǒu, huì yì tuī chí dào sì diǎn.",
+            "vi": "Có, họp dời đến bốn giờ."
+      },
+      {
+            "zh": "请帮我预订明天的会议室。",
+            "pinyin": "qǐng bāng wǒ yù dìng míng tiān de huì yì shì.",
+            "vi": "Xin giúp tôi đặt phòng họp ngày mai."
+      },
+      {
+            "zh": "已经预订好了，九点到十一点。",
+            "pinyin": "yǐ jīng yù dìng hǎo le, jiǔ diǎn dào shí yī diǎn.",
+            "vi": "Đã đặt xong, từ chín đến mười một giờ."
+      },
+      {
+            "zh": "我需要请假半天，可以吗？",
+            "pinyin": "wǒ xū yào qǐng jià bàn tiān, kě yǐ ma?",
+            "vi": "Tôi cần nghỉ phép nửa ngày, được không?"
+      },
+      {
+            "zh": "可以，请提交请假申请。",
+            "pinyin": "kě yǐ, qǐng tí jiāo qǐng jià shēn qǐng.",
+            "vi": "Được, xin nộp đơn xin nghỉ."
+      },
+      {
+            "zh": "下周出差需要准备什么？",
+            "pinyin": "xià zhōu chū chāi xū yào zhǔn bèi shén me?",
+            "vi": "Tuần sau đi công tác cần chuẩn bị gì?"
+      },
+      {
+            "zh": "准备资料和行程单就行。",
+            "pinyin": "zhǔn bèi zī liào hé xíng chéng dān jiù xíng.",
+            "vi": "Chuẩn bị tài liệu và lịch trình là được."
+      },
+      {
+            "zh": "请把重要事项标记出来。",
+            "pinyin": "qǐng bǎ zhòng yào shì xiàng biāo jì chū lái.",
+            "vi": "Xin đánh dấu những việc quan trọng."
+      },
+      {
+            "zh": "已经标记了，请查看。",
+            "pinyin": "yǐ jīng biāo jì le, qǐng chá kàn.",
+            "vi": "Đã đánh dấu, xin xem."
+      },
+      {
+            "zh": "这个项目需要大家配合完成。",
+            "pinyin": "zhè ge xiàng mù xū yào dà jiā pèi hé wán chéng.",
+            "vi": "Dự án này cần mọi người phối hợp hoàn thành."
+      },
+      {
+            "zh": "我负责数据，你负责报告。",
+            "pinyin": "wǒ fù zé shù jù, nǐ fù zé bào gào.",
+            "vi": "Tôi phụ trách dữ liệu, bạn phụ trách báo cáo."
+      },
+      {
+            "zh": "有问题随时找我沟通。",
+            "pinyin": "yǒu wèn tí suí shí zhǎo wǒ gōu tōng.",
+            "vi": "Có vấn đề cứ tìm tôi giao tiếp bất cứ lúc nào."
+      },
+      {
+            "zh": "没问题，我会及时反馈。",
+            "pinyin": "méi wèn tí, wǒ huì jí shí fǎn kuì.",
+            "vi": "Không vấn đề, tôi sẽ phản hồi kịp thời."
+      },
+      {
+            "zh": "请帮我看一下这个方案。",
+            "pinyin": "qǐng bāng wǒ kàn yī xià zhè ge fāng àn.",
+            "vi": "Xin giúp tôi xem phương án này một chút."
+      },
+      {
+            "zh": "好的，我看完给你意见。",
+            "pinyin": "hǎo de, wǒ kàn wán gěi nǐ yì jiàn.",
+            "vi": "Được, tôi xem xong cho bạn ý kiến."
+      },
+      {
+            "zh": "新同事不太熟悉流程，请带一下。",
+            "pinyin": "xīn tóng shì bú tài shóu xī liú chéng, qǐng dài yī xià.",
+            "vi": "Đồng nghiệp mới chưa quen quy trình, xin kèm một chút."
+      },
+      {
+            "zh": "没问题，我来带他。",
+            "pinyin": "méi wèn tí, wǒ lái dài tā.",
+            "vi": "Không vấn đề, tôi kèm anh ấy."
+      },
+      {
+            "zh": "这个任务比较急，请优先处理。",
+            "pinyin": "zhè ge rèn wù bǐ jiào jí, qǐng yōu xiān chǔ lǐ.",
+            "vi": "Nhiệm vụ này khá gấp, xin ưu tiên xử lý."
+      },
+      {
+            "zh": "我马上处理。",
+            "pinyin": "wǒ mǎ shàng chǔ lǐ.",
+            "vi": "Tôi xử lý ngay."
+      },
+      {
+            "zh": "请把你的部分发到共享文件夹。",
+            "pinyin": "qǐng bǎ nǐ de bù fen fā dào gòng xiǎng wén jiàn jiā.",
+            "vi": "Xin gửi phần của bạn vào thư mục chia sẻ."
+      },
+      {
+            "zh": "已经发了。",
+            "pinyin": "yǐ jīng fā le.",
+            "vi": "Đã gửi."
+      },
+      {
+            "zh": "我们一起讨论一下这个方案吧。",
+            "pinyin": "wǒ men yī qǐ tǎo lùn yī xià zhè ge fāng àn ba.",
+            "vi": "Chúng ta cùng thảo luận phương án này một chút đi."
+      },
+      {
+            "zh": "好的，下午三点怎么样？",
+            "pinyin": "hǎo de, xià wǔ sān diǎn zěn me yàng?",
+            "vi": "Được, chiều ba giờ thế nào?"
+      },
+      {
+            "zh": "请互相支持，共同完成目标。",
+            "pinyin": "qǐng hù xiāng zhī chí, gòng tóng wán chéng mù biāo.",
+            "vi": "Xin hỗ trợ lẫn nhau, cùng hoàn thành mục tiêu."
+      },
+      {
+            "zh": "没问题，我们一起努力。",
+            "pinyin": "méi wèn tí, wǒ men yī qǐ nǔ lì.",
+            "vi": "Không vấn đề, chúng tôi cùng cố gắng."
+      },
+      {
+            "zh": "你那边进度怎么样？",
+            "pinyin": "nǐ nà biān jìn dù zěn me yàng?",
+            "vi": "Tiến độ bên bạn thế nào?"
+      },
+      {
+            "zh": "还行，快完成了。",
+            "pinyin": "hái xíng, kuài wán chéng le.",
+            "vi": "Ổn, sắp xong."
+      },
+      {
+            "zh": "有困难请及时说。",
+            "pinyin": "yǒu kùn nan qǐng jí shí shuō.",
+            "vi": "Có khó khăn xin nói kịp thời."
+      },
+      {
+            "zh": "目前没有，谢谢关心。",
+            "pinyin": "mù qián méi yǒu, xiè xie guān xīn.",
+            "vi": "Hiện không có, cảm ơn quan tâm."
+      },
+      {
+            "zh": "电脑卡了，怎么办？",
+            "pinyin": "diàn nǎo kǎ le, zěn me bàn?",
+            "vi": "Máy tính bị đơ, làm sao?"
+      },
+      {
+            "zh": "先保存文件，再重启试试。",
+            "pinyin": "xiān bǎo cún wén jiàn, zài chóng qǐ shì shi.",
+            "vi": "Lưu file trước, rồi khởi động lại thử."
+      },
+      {
+            "zh": "打印机没墨了，请更换。",
+            "pinyin": "dǎ yìn jī méi mò le, qǐng gēng huàn.",
+            "vi": "Máy in hết mực, xin thay."
+      },
+      {
+            "zh": "我去找IT部门处理。",
+            "pinyin": "wǒ qù zhǎo IT bù mén chǔ lǐ.",
+            "vi": "Tôi đi tìm bộ phận IT xử lý."
+      },
+      {
+            "zh": "请帮我安装这个软件。",
+            "pinyin": "qǐng bāng wǒ ān zhuāng zhè ge ruǎn jiàn.",
+            "vi": "Xin giúp tôi cài phần mềm này."
+      },
+      {
+            "zh": "需要管理员权限，我帮你申请。",
+            "pinyin": "xū yào guǎn lǐ yuán quán xiàn, wǒ bāng nǐ shēn qǐng.",
+            "vi": "Cần quyền quản trị, tôi giúp bạn đề xuất."
+      },
+      {
+            "zh": "网络慢了，是什么原因？",
+            "pinyin": "wǎng luò màn le, shì shén me yuán yīn?",
+            "vi": "Mạng chậm, nguyên nhân gì?"
+      },
+      {
+            "zh": "可能是服务器问题，正在排查。",
+            "pinyin": "kě néng shì fú wù qì wèn tí, zhèng zài pái chá.",
+            "vi": "Có thể là vấn đề server, đang kiểm tra."
+      },
+      {
+            "zh": "请把文件保存到共享盘。",
+            "pinyin": "qǐng bǎ wén jiàn bǎo cún dào gòng xiǎng pán.",
+            "vi": "Xin lưu file vào ổ chia sẻ."
+      },
+      {
+            "zh": "已经保存了。",
+            "pinyin": "yǐ jīng bǎo cún le.",
+            "vi": "Đã lưu."
+      },
+      {
+            "zh": "投影仪连不上电脑。",
+            "pinyin": "tóu yǐng yí lián bú shàng diàn nǎo.",
+            "vi": "Máy chiếu không kết nối được máy tính."
+      },
+      {
+            "zh": "检查一下线，或者换个接口。",
+            "pinyin": "jiǎn chá yī xià xiàn, huò zhě huàn ge jiē kǒu.",
+            "vi": "Kiểm tra dây một chút, hoặc đổi cổng."
+      },
+      {
+            "zh": "请定期清理电脑垃圾文件。",
+            "pinyin": "qǐng dìng qī qīng lǐ diàn nǎo lā jī wén jiàn.",
+            "vi": "Xin dọn file rác máy tính định kỳ."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "这个软件需要更新吗？",
+            "pinyin": "zhè ge ruǎn jiàn xū yào gēng xīn ma?",
+            "vi": "Phần mềm này có cần cập nhật không?"
+      },
+      {
+            "zh": "需要，更新后功能更稳定。",
+            "pinyin": "xū yào, gēng xīn hòu gōng néng gèng wěn dìng.",
+            "vi": "Cần, sau cập nhật chức năng ổn định hơn."
+      },
+      {
+            "zh": "请帮我设置打印机。",
+            "pinyin": "qǐng bāng wǒ shè zhì dǎ yìn jī.",
+            "vi": "Xin giúp tôi cài đặt máy in."
+      },
+      {
+            "zh": "没问题，我帮你设置。",
+            "pinyin": "méi wèn tí, wǒ bāng nǐ shè zhì.",
+            "vi": "Không vấn đề, tôi giúp bạn cài đặt."
+      },
+      {
+            "zh": "电脑密码忘记了，怎么办？",
+            "pinyin": "diàn nǎo mì mǎ wàng jì le, zěn me bàn?",
+            "vi": "Quên mật khẩu máy tính, làm sao?"
+      },
+      {
+            "zh": "联系IT部门重置。",
+            "pinyin": "lián xì IT bù mén chóng zhì.",
+            "vi": "Liên hệ bộ phận IT đặt lại."
+      },
+      {
+            "zh": "这个任务进展怎么样？",
+            "pinyin": "zhè ge rèn wù jìn zhǎn zěn me yàng?",
+            "vi": "Tiến triển nhiệm vụ này thế nào?"
+      },
+      {
+            "zh": "已经完成百分之八十了。",
+            "pinyin": "yǐ jīng wán chéng bǎi fēn zhī bā shí le.",
+            "vi": "Đã hoàn thành 80%."
+      },
+      {
+            "zh": "请加快进度，客户催了。",
+            "pinyin": "qǐng jiā kuài jìn dù, kè hù cuī le.",
+            "vi": "Xin tăng tốc tiến độ, khách hàng thúc rồi."
+      },
+      {
+            "zh": "我尽量今天完成。",
+            "pinyin": "wǒ jǐn liàng jīn tiān wán chéng.",
+            "vi": "Tôi cố gắng hoàn thành hôm nay."
+      },
+      {
+            "zh": "有没有需要帮忙的地方？",
+            "pinyin": "yǒu méi yǒu xū yào bāng máng de dì fang?",
+            "vi": "Có chỗ nào cần giúp không?"
+      },
+      {
+            "zh": "暂时没有，谢谢。",
+            "pinyin": "zàn shí méi yǒu, xiè xie.",
+            "vi": "Tạm thời không, cảm ơn."
+      },
+      {
+            "zh": "请把进度更新到系统里。",
+            "pinyin": "qǐng bǎ jìn dù gēng xīn dào xì tǒng lǐ.",
+            "vi": "Xin cập nhật tiến độ vào hệ thống."
+      },
+      {
+            "zh": "已经更新了。",
+            "pinyin": "yǐ jīng gēng xīn le.",
+            "vi": "Đã cập nhật."
+      },
+      {
+            "zh": "这个项目下周必须完成。",
+            "pinyin": "zhè ge xiàng mù xià zhōu bì xū wán chéng.",
+            "vi": "Dự án này tuần sau phải hoàn thành."
+      },
+      {
+            "zh": "没问题，我们会按时完成。",
+            "pinyin": "méi wèn tí, wǒ men huì àn shí wán chéng.",
+            "vi": "Không vấn đề, chúng tôi sẽ hoàn thành đúng hạn."
+      },
+      {
+            "zh": "请检查一下数据是否准确。",
+            "pinyin": "qǐng jiǎn chá yī xià shù jù shì fǒu zhǔn què.",
+            "vi": "Xin kiểm tra dữ liệu có chính xác không?"
+      },
+      {
+            "zh": "已经检查了，没有问题。",
+            "pinyin": "yǐ jīng jiǎn chá le, méi yǒu wèn tí.",
+            "vi": "Đã kiểm tra, không có vấn đề."
+      },
+      {
+            "zh": "客户反馈需要修改方案。",
+            "pinyin": "kè hù fǎn kuì xū yào xiū gǎi fāng àn.",
+            "vi": "Khách hàng phản hồi cần sửa phương án."
+      },
+      {
+            "zh": "我马上修改，尽快发给你。",
+            "pinyin": "wǒ mǎ shàng xiū gǎi, jǐn kuài fā gěi nǐ.",
+            "vi": "Tôi sửa ngay, gửi cho bạn sớm nhất."
+      },
+      {
+            "zh": "请把完成情况汇报一下。",
+            "pinyin": "qǐng bǎ wán chéng qíng kuàng huì bào yī xià.",
+            "vi": "Xin báo cáo tình hình hoàn thành một chút."
+      },
+      {
+            "zh": "主要任务已完成，细节还在调整。",
+            "pinyin": "zhǔ yào rèn wù yǐ wán chéng, xì jié hái zài tiáo zhěng.",
+            "vi": "Nhiệm vụ chính đã xong, chi tiết đang điều chỉnh."
+      },
+      {
+            "zh": "如果有延误请及时通知。",
+            "pinyin": "rú guǒ yǒu yán wu qǐng jí shí tōng zhī.",
+            "vi": "Nếu có chậm trễ xin thông báo kịp thời."
+      },
+      {
+            "zh": "目前没有延误。",
+            "pinyin": "mù qián méi yǒu yán wu.",
+            "vi": "Hiện không có chậm trễ."
+      },
+      {
+            "zh": "请把工作总结写一下。",
+            "pinyin": "qǐng bǎ gōng zuò zǒng jié xiě yī xià.",
+            "vi": "Xin viết tổng kết công việc một chút."
+      },
+      {
+            "zh": "写好了，我发到邮箱。",
+            "pinyin": "xiě hǎo le, wǒ fā dào yóu xiāng.",
+            "vi": "Viết xong, tôi gửi vào email."
+      },
+      {
+            "zh": "客户来了，请带他到会议室。",
+            "pinyin": "kè hù lái le, qǐng dài tā dào huì yì shì.",
+            "vi": "Khách đến rồi, xin dẫn anh ấy đến phòng họp."
+      },
+      {
+            "zh": "好的，我马上去。",
+            "pinyin": "hǎo de, wǒ mǎ shàng qù.",
+            "vi": "Được, tôi đi ngay."
+      },
+      {
+            "zh": "请准备茶水和资料。",
+            "pinyin": "qǐng zhǔn bèi chá shuǐ hé zī liào.",
+            "vi": "Xin chuẩn bị nước trà và tài liệu."
+      },
+      {
+            "zh": "已经准备好了。",
+            "pinyin": "yǐ jīng zhǔn bèi hǎo le.",
+            "vi": "Đã chuẩn bị xong."
+      },
+      {
+            "zh": "客户问报价，怎么回复？",
+            "pinyin": "kè hù wèn bào jià, zěn me huí fù?",
+            "vi": "Khách hỏi báo giá, trả lời thế nào?"
+      },
+      {
+            "zh": "先发标准报价，再确认细节。",
+            "pinyin": "xiān fā biāo zhǔn bào jià, zài què rèn xì jié.",
+            "vi": "Gửi báo giá tiêu chuẩn trước, rồi xác nhận chi tiết."
+      },
+      {
+            "zh": "请把客户联系方式发给我。",
+            "pinyin": "qǐng bǎ kè hù lián xì fāng shì fā gěi wǒ.",
+            "vi": "Xin gửi thông tin liên hệ khách hàng cho tôi."
+      },
+      {
+            "zh": "已经发到你邮箱了。",
+            "pinyin": "yǐ jīng fā dào nǐ yóu xiāng le.",
+            "vi": "Đã gửi vào email của bạn."
+      },
+      {
+            "zh": "客户要求改方案，怎么办？",
+            "pinyin": "kè hù yāo qiú gǎi fāng àn, zěn me bàn?",
+            "vi": "Khách yêu cầu sửa phương án, làm sao?"
+      },
+      {
+            "zh": "先了解具体需求，再调整。",
+            "pinyin": "xiān liǎo jiě jù tǐ xū qiú, zài tiáo zhěng.",
+            "vi": "Trước hiểu yêu cầu cụ thể, rồi điều chỉnh."
+      },
+      {
+            "zh": "请跟进一下这个客户的订单。",
+            "pinyin": "qǐng gēn jìn yī xià zhè ge kè hù de dìng dān.",
+            "vi": "Xin theo dõi đơn hàng của khách này một chút."
+      },
+      {
+            "zh": "我已经联系了，明天回复。",
+            "pinyin": "wǒ yǐ jīng lián xì le, míng tiān huí fù.",
+            "vi": "Tôi đã liên hệ, ngày mai trả lời."
+      },
+      {
+            "zh": "客户投诉了，怎么处理？",
+            "pinyin": "kè hù tóu sù le, zěn me chǔ lǐ?",
+            "vi": "Khách khiếu nại, xử lý thế nào?"
+      },
+      {
+            "zh": "先道歉，然后了解情况，尽快解决。",
+            "pinyin": "xiān dào qiàn, rán hòu liǎo jiě qíng kuàng, jǐn kuài jiě jué.",
+            "vi": "Xin lỗi trước, rồi hiểu tình hình, giải quyết sớm nhất."
+      },
+      {
+            "zh": "请把会议安排通知客户。",
+            "pinyin": "qǐng bǎ huì yì ān pái tōng zhī kè hù.",
+            "vi": "Xin thông báo lịch họp cho khách."
+      },
+      {
+            "zh": "已经通知了。",
+            "pinyin": "yǐ jīng tōng zhī le.",
+            "vi": "Đã thông báo."
+      },
+      {
+            "zh": "客户想参观工厂，怎么安排？",
+            "pinyin": "kè hù xiǎng cān guān gōng chǎng, zěn me ān pái?",
+            "vi": "Khách muốn tham quan nhà máy, sắp xếp thế nào?"
+      },
+      {
+            "zh": "先确认时间，再联系生产部门。",
+            "pinyin": "xiān què rèn shí jiān, zài lián xì shēng chǎn bù mén.",
+            "vi": "Xác nhận thời gian trước, rồi liên hệ bộ phận sản xuất."
+      },
+      {
+            "zh": "请记录客户的需求。",
+            "pinyin": "qǐng jì lù kè hù de xū qiú.",
+            "vi": "Xin ghi lại yêu cầu của khách."
+      },
+      {
+            "zh": "已经记录了，会后整理。",
+            "pinyin": "yǐ jīng jì lù le, huì hòu zhěng lǐ.",
+            "vi": "Đã ghi, sau họp sắp xếp."
+      },
+      {
+            "zh": "请保持办公桌整洁。",
+            "pinyin": "qǐng bǎo chí bàn gōng zhuō zhěng jié.",
+            "vi": "Xin giữ bàn làm việc gọn gàng."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "下班后请关闭电脑和灯。",
+            "pinyin": "xià bān hòu qǐng guān bì diàn nǎo hé dēng.",
+            "vi": "Sau tan ca xin tắt máy tính và đèn."
+      },
+      {
+            "zh": "没问题。",
+            "pinyin": "méi wèn tí.",
+            "vi": "Không vấn đề."
+      },
+      {
+            "zh": "请不要在办公室大声说话。",
+            "pinyin": "qǐng bú yào zài bàn gōng shì dà shēng shuō huà.",
+            "vi": "Xin đừng nói to trong văn phòng."
+      },
+      {
+            "zh": "我会注意音量。",
+            "pinyin": "wǒ huì zhù yì yīn liàng.",
+            "vi": "Tôi sẽ chú ý âm lượng."
+      },
+      {
+            "zh": "重要文件请及时存档。",
+            "pinyin": "zhòng yào wén jiàn qǐng jí shí cún dàng.",
+            "vi": "File quan trọng xin lưu trữ kịp thời."
+      },
+      {
+            "zh": "已经存档了。",
+            "pinyin": "yǐ jīng cún dàng le.",
+            "vi": "Đã lưu trữ."
+      },
+      {
+            "zh": "请遵守公司保密规定。",
+            "pinyin": "qǐng zūn shǒu gōng sī bǎo mì guī dìng.",
+            "vi": "Xin tuân thủ quy định bảo mật công ty."
+      },
+      {
+            "zh": "我会严格遵守。",
+            "pinyin": "wǒ huì yán gé zūn shǒu.",
+            "vi": "Tôi sẽ tuân thủ nghiêm ngặt."
+      },
+      {
+            "zh": "访客需要登记才能进入。",
+            "pinyin": "fǎng kè xū yào dēng jì cái néng jìn rù.",
+            "vi": "Khách cần đăng ký mới vào được."
+      },
+      {
+            "zh": "我已经登记了。",
+            "pinyin": "wǒ yǐ jīng dēng jì le.",
+            "vi": "Tôi đã đăng ký."
+      },
+      {
+            "zh": "请不要在工作时间处理私事。",
+            "pinyin": "qǐng bú yào zài gōng zuò shí jiān chǔ lǐ sī shì.",
+            "vi": "Xin đừng xử lý việc riêng trong giờ làm việc."
+      },
+      {
+            "zh": "我会注意的。",
+            "pinyin": "wǒ huì zhù yì de.",
+            "vi": "Tôi sẽ chú ý."
+      },
+      {
+            "zh": "紧急情况请走安全通道。",
+            "pinyin": "jǐn jí qíng kuàng qǐng zǒu ān quán tōng dào.",
+            "vi": "Trường hợp khẩn cấp xin đi lối thoát an toàn."
+      },
+      {
+            "zh": "我知道了。",
+            "pinyin": "wǒ zhī dào le.",
+            "vi": "Tôi biết rồi."
+      },
+      {
+            "zh": "请定期更换电脑密码。",
+            "pinyin": "qǐng dìng qī gēng huàn diàn nǎo mì mǎ.",
+            "vi": "Xin đổi mật khẩu máy tính định kỳ."
+      },
+      {
+            "zh": "我会记得的。",
+            "pinyin": "wǒ huì jì de de.",
+            "vi": "Tôi sẽ nhớ."
+      },
+      {
+            "zh": "办公用品请向行政申请。",
+            "pinyin": "bàn gōng yòng pǐn qǐng xiàng xíng zhèng shēn qǐng.",
+            "vi": "Đồ dùng văn phòng xin đề xuất với hành chính."
+      },
+      {
+            "zh": "好的，我去申请。",
+            "pinyin": "hǎo de, wǒ qù shēn qǐng.",
+            "vi": "Được, tôi đi đề xuất."
+      },
+      {
+            "zh": "早上好，今天先处理邮件再开会。",
+            "pinyin": "zǎo shang hǎo, jīn tiān xiān chǔ lǐ yóu jiàn zài kāi huì.",
+            "vi": "Chào buổi sáng, hôm nay xử lý email trước rồi họp."
+      },
+      {
+            "zh": "请准备下午两点的会议材料。",
+            "pinyin": "qǐng zhǔn bèi xià wǔ liǎng diǎn de huì yì cái liào.",
+            "vi": "Xin chuẩn bị tài liệu họp hai giờ chiều."
+      },
+      {
+            "zh": "这份文件请发到我邮箱。",
+            "pinyin": "zhè fèn wén jiàn qǐng fā dào wǒ yóu xiāng.",
+            "vi": "File này xin gửi vào email của tôi."
+      },
+      {
+            "zh": "明天客户来访，请安排接待。",
+            "pinyin": "míng tiān kè hù lái fǎng, qǐng ān pái jiē dài.",
+            "vi": "Ngày mai khách đến, xin sắp xếp tiếp đón."
+      },
+      {
+            "zh": "这个项目需要大家配合完成。",
+            "pinyin": "zhè ge xiàng mù xū yào dà jiā pèi hé wán chéng.",
+            "vi": "Dự án này cần mọi người phối hợp hoàn thành."
+      },
+      {
+            "zh": "电脑卡了，先保存再重启。",
+            "pinyin": "diàn nǎo kǎ le, xiān bǎo cún zài chóng qǐ.",
+            "vi": "Máy tính đơ, lưu trước rồi khởi động lại."
+      },
+      {
+            "zh": "请加快进度，客户在催。",
+            "pinyin": "qǐng jiā kuài jìn dù, kè hù zài cuī.",
+            "vi": "Xin tăng tốc tiến độ, khách đang thúc."
+      },
+      {
+            "zh": "客户来了，请带到会议室。",
+            "pinyin": "kè hù lái le, qǐng dài dào huì yì shì.",
+            "vi": "Khách đến rồi, xin dẫn đến phòng họp."
+      },
+      {
+            "zh": "请保持办公桌整洁。",
+            "pinyin": "qǐng bǎo chí bàn gōng zhuō zhěng jié.",
+            "vi": "Xin giữ bàn làm việc gọn gàng."
+      },
+      {
+            "zh": "会议纪要我来记录，会后发群里。",
+            "pinyin": "huì yì jì yào wǒ lái jì lù, huì hòu fā qún lǐ.",
+            "vi": "Biên bản họp tôi ghi, sau họp gửi nhóm."
+      },
+      {
+            "zh": "请把资料存到共享文件夹。",
+            "pinyin": "qǐng bǎ zī liào cún dào gòng xiǎng wén jiàn jiā.",
+            "vi": "Xin lưu tài liệu vào thư mục chia sẻ."
+      },
+      {
+            "zh": "我下午有事，会议可以改时间吗？",
+            "pinyin": "wǒ xià wǔ yǒu shì, huì yì kě yǐ gǎi shí jiān ma?",
+            "vi": "Chiều tôi có việc, họp có thể đổi giờ không?"
+      },
+      {
+            "zh": "新同事请跟着学习流程。",
+            "pinyin": "xīn tóng shì qǐng gēn zhe xué xí liú chéng.",
+            "vi": "Đồng nghiệp mới xin theo học quy trình."
+      },
+      {
+            "zh": "打印机缺纸了，我去加。",
+            "pinyin": "dǎ yìn jī quē zhǐ le, wǒ qù jiā.",
+            "vi": "Máy in hết giấy, tôi đi thêm."
+      },
+      {
+            "zh": "这个任务下周必须完成。",
+            "pinyin": "zhè ge rèn wù xià zhōu bì xū wán chéng.",
+            "vi": "Nhiệm vụ này tuần sau phải hoàn thành."
+      },
+      {
+            "zh": "请跟进客户订单情况。",
+            "pinyin": "qǐng gēn jìn kè hù dìng dān qíng kuàng.",
+            "vi": "Xin theo dõi tình hình đơn hàng khách."
+      },
+      {
+            "zh": "下班前请关闭电脑。",
+            "pinyin": "xià bān qián qǐng guān bì diàn nǎo.",
+            "vi": "Trước khi tan ca xin tắt máy tính."
+      },
+      {
+            "zh": "请把进度更新到系统。",
+            "pinyin": "qǐng bǎ jìn dù gēng xīn dào xì tǒng.",
+            "vi": "Xin cập nhật tiến độ vào hệ thống."
+      },
+      {
+            "zh": "有问题随时沟通。",
+            "pinyin": "yǒu wèn tí suí shí gōu tōng.",
+            "vi": "Có vấn đề cứ giao tiếp bất cứ lúc nào."
+      },
+      {
+            "zh": "今天工作顺利，大家辛苦了。",
+            "pinyin": "jīn tiān gōng zuò shùn lì, dà jiā xīn kǔ le.",
+            "vi": "Hôm nay công việc thuận lợi, mọi người vất vả rồi."
+      }
+]
+  },
+  "BENH_VIEN-1": {
+    title: "🏥 Bệnh viện và sức khỏe phần 1",
+    color: "#b71c1c",
+    sections: [
+      {
+            "name": "Triệu chứng & mô tả",
+            "start": 0
+      },
+      {
+            "name": "Đăng ký & khám bệnh",
+            "start": 20
+      },
+      {
+            "name": "Xét nghiệm & kết quả",
+            "start": 40
+      },
+      {
+            "name": "Thuốc & uống thuốc",
+            "start": 60
+      },
+      {
+            "name": "Nội trú & điều trị",
+            "start": 80
+      },
+      {
+            "name": "Bảo hiểm & thanh toán",
+            "start": 100
+      },
+      {
+            "name": "Cấp cứu",
+            "start": 120
+      },
+      {
+            "name": "Sức khỏe hàng ngày",
+            "start": 140
+      },
+      {
+            "name": "Phòng ngừa & chăm sóc",
+            "start": 160
+      },
+      {
+            "name": "Tình huống tổng hợp",
+            "start": 180
+      }
+],
+    sentences: [
+      {
+            "zh": "我最近感觉身体有点不舒服。",
+            "pinyin": "wǒ zuì jìn gǎn jué shēn tǐ yǒu diǎn bù shū fu.",
+            "vi": "Gần đây tôi cảm thấy cơ thể hơi không khỏe."
+      },
+      {
+            "zh": "我头疼了两天，还有点发烧。",
+            "pinyin": "wǒ tóu téng le liǎng tiān, hái yǒu diǎn fā shāo.",
+            "vi": "Tôi đau đầu hai ngày rồi, còn hơi sốt."
+      },
+      {
+            "zh": "嗓子很痛，说话都有点困难。",
+            "pinyin": "sǎng zi hěn tòng, shuō huà dōu yǒu diǎn kùn nan.",
+            "vi": "Họng rất đau, nói chuyện cũng hơi khó."
+      },
+      {
+            "zh": "我咳嗽得很厉害，晚上睡不好。",
+            "pinyin": "wǒ ké sòu de hěn lì hai, wǎn shang shuì bù hǎo.",
+            "vi": "Tôi ho rất nhiều, tối ngủ không ngon."
+      },
+      {
+            "zh": "肚子不舒服，可能是吃坏东西了。",
+            "pinyin": "dù zi bù shū fu, kě néng shì chī huài dōng xi le.",
+            "vi": "Bụng không khỏe, có thể ăn phải đồ xấu."
+      },
+      {
+            "zh": "我全身没力气，感觉很累。",
+            "pinyin": "wǒ quán shēn méi lì qi, gǎn jué hěn lèi.",
+            "vi": "Tôi toàn thân không có sức, cảm thấy rất mệt."
+      },
+      {
+            "zh": "鼻子堵住了，呼吸有点困难。",
+            "pinyin": "bí zi dǔ zhù le, hū xī yǒu diǎn kùn nan.",
+            "vi": "Mũi bị tắc, thở hơi khó."
+      },
+      {
+            "zh": "我皮肤起疹子了，很痒。",
+            "pinyin": "wǒ pí fū qǐ zhěn zi le, hěn yǎng.",
+            "vi": "Da tôi nổi mẩn, rất ngứa."
+      },
+      {
+            "zh": "胸口有点闷，呼吸不太顺畅。",
+            "pinyin": "xiōng kǒu yǒu diǎn mèn, hū xī bú tài shùn chàng.",
+            "vi": "Ngực hơi tức, thở không thông lắm."
+      },
+      {
+            "zh": "我拉肚子已经两天了。",
+            "pinyin": "wǒ lā dù zi yǐ jīng liǎng tiān le.",
+            "vi": "Tôi bị tiêu chảy đã hai ngày rồi."
+      },
+      {
+            "zh": "关节有点疼，活动不太方便。",
+            "pinyin": "guān jié yǒu diǎn téng, huó dòng bú tài fāng biàn.",
+            "vi": "Khớp hơi đau, hoạt động không tiện lắm."
+      },
+      {
+            "zh": "眼睛很红，还有点肿。",
+            "pinyin": "yǎn jing hěn hóng, hái yǒu diǎn zhǒng.",
+            "vi": "Mắt rất đỏ, còn hơi sưng."
+      },
+      {
+            "zh": "我最近失眠，晚上很难入睡。",
+            "pinyin": "wǒ zuì jìn shī mián, wǎn shang hěn nán rù shuì.",
+            "vi": "Gần đây tôi mất ngủ, tối rất khó vào giấc."
+      },
+      {
+            "zh": "头晕，站起来的时候更明显。",
+            "pinyin": "tóu yūn, zhàn qǐ lái de shí hou gèng míng xiǎn.",
+            "vi": "Chóng mặt, lúc đứng dậy càng rõ."
+      },
+      {
+            "zh": "我牙疼得很厉害，影响吃饭。",
+            "pinyin": "wǒ yá téng de hěn lì hai, yǐng xiǎng chī fàn.",
+            "vi": "Tôi đau răng rất nhiều, ảnh hưởng ăn cơm."
+      },
+      {
+            "zh": "背部有点疼，可能是坐太久了。",
+            "pinyin": "bèi bù yǒu diǎn téng, kě néng shì zuò tài jiǔ le.",
+            "vi": "Lưng hơi đau, có thể ngồi lâu quá."
+      },
+      {
+            "zh": "我感觉喉咙里有异物感。",
+            "pinyin": "wǒ gǎn jué hóu lóng lǐ yǒu yì wù gǎn.",
+            "vi": "Tôi cảm thấy trong họng có cảm giác dị vật."
+      },
+      {
+            "zh": "最近食欲不好，吃什么都没味道。",
+            "pinyin": "zuì jìn shí yù bù hǎo, chī shén me dōu méi wèi dào.",
+            "vi": "Gần đây chán ăn, ăn gì cũng không ngon."
+      },
+      {
+            "zh": "我流鼻血了，需要处理一下。",
+            "pinyin": "wǒ liú bí xuě le, xū yào chǔ lǐ yī xià.",
+            "vi": "Tôi bị chảy máu mũi, cần xử lý một chút."
+      },
+      {
+            "zh": "手脚有点发麻，是什么原因？",
+            "pinyin": "shǒu jiǎo yǒu diǎn fā má, shì shén me yuán yīn?",
+            "vi": "Tay chân hơi tê, là nguyên nhân gì?"
+      },
+      {
+            "zh": "请问挂号在哪里办理？",
+            "pinyin": "qǐng wèn guà hào zài nǎ lǐ bàn lǐ?",
+            "vi": "Xin hỏi đăng ký khám ở đâu?"
+      },
+      {
+            "zh": "我需要挂内科的号。",
+            "pinyin": "wǒ xū yào guà nèi kē de hào.",
+            "vi": "Tôi cần đăng ký khoa nội."
+      },
+      {
+            "zh": "今天专家号还有吗？",
+            "pinyin": "jīn tiān zhuān jiā hào hái yǒu ma?",
+            "vi": "Hôm nay còn số chuyên gia không?"
+      },
+      {
+            "zh": "普通门诊现在可以挂号吗？",
+            "pinyin": "pǔ tōng mén zhěn xiàn zài kě yǐ guà hào ma?",
+            "vi": "Khám thông thường bây giờ có thể đăng ký không?"
+      },
+      {
+            "zh": "请问内科在几楼？",
+            "pinyin": "qǐng wèn nèi kē zài jǐ lóu?",
+            "vi": "Xin hỏi khoa nội ở tầng mấy?"
+      },
+      {
+            "zh": "我第一次来，不太熟悉流程。",
+            "pinyin": "wǒ dì yī cì lái, bú tài shóu xī liú chéng.",
+            "vi": "Tôi lần đầu đến, chưa quen quy trình."
+      },
+      {
+            "zh": "需要带身份证才能挂号吗？",
+            "pinyin": "xū yào dài shēn fèn zhèng cái néng guà hào ma?",
+            "vi": "Có cần mang chứng minh thư mới đăng ký được không?"
+      },
+      {
+            "zh": "我预约了下午两点的号。",
+            "pinyin": "wǒ yù yuē le xià wǔ liǎng diǎn de hào.",
+            "vi": "Tôi đã đặt số hai giờ chiều."
+      },
+      {
+            "zh": "排队的人很多，要等多久？",
+            "pinyin": "pái duì de rén hěn duō, yào děng duō jiǔ?",
+            "vi": "Người xếp hàng nhiều, phải đợi bao lâu?"
+      },
+      {
+            "zh": "请问儿科在哪个方向？",
+            "pinyin": "qǐng wèn ér kē zài nǎ ge fāng xiàng?",
+            "vi": "Xin hỏi khoa nhi ở hướng nào?"
+      },
+      {
+            "zh": "我可以先取号再去候诊吗？",
+            "pinyin": "wǒ kě yǐ xiān qǔ hào zài qù hòu zhěn ma?",
+            "vi": "Tôi có thể lấy số trước rồi đến phòng chờ không?"
+      },
+      {
+            "zh": "医生现在在看诊吗？",
+            "pinyin": "yī shēng xiàn zài zài kàn zhěn ma?",
+            "vi": "Bác sĩ hiện đang khám không?"
+      },
+      {
+            "zh": "我需要转诊到其他科室。",
+            "pinyin": "wǒ xū yào zhuǎn zhěn dào qí tā kē shì.",
+            "vi": "Tôi cần chuyển sang khoa khác."
+      },
+      {
+            "zh": "请问收费窗口在哪里？",
+            "pinyin": "qǐng wèn shōu fèi chuāng kǒu zài nǎ lǐ?",
+            "vi": "Xin hỏi quầy thu phí ở đâu?"
+      },
+      {
+            "zh": "我可以在手机上挂号吗？",
+            "pinyin": "wǒ kě yǐ zài shǒu jī shàng guà hào ma?",
+            "vi": "Tôi có thể đăng ký trên điện thoại không?"
+      },
+      {
+            "zh": "今天上午的号已经挂完了。",
+            "pinyin": "jīn tiān shàng wǔ de hào yǐ jīng guà wán le.",
+            "vi": "Số buổi sáng hôm nay đã hết rồi."
+      },
+      {
+            "zh": "请问护士站在几号诊室旁边？",
+            "pinyin": "qǐng wèn hù shi zhàn zài jǐ hào zhěn shì páng biān?",
+            "vi": "Xin hỏi trạm y tá ở bên cạnh phòng khám số mấy?"
+      },
+      {
+            "zh": "我需要复诊，带上次的病历了。",
+            "pinyin": "wǒ xū yào fù zhěn, dài shàng cì de bìng lì le.",
+            "vi": "Tôi cần khám lại, đã mang bệnh án lần trước."
+      },
+      {
+            "zh": "挂号费是多少钱？",
+            "pinyin": "guà hào fèi shì duō shao qián?",
+            "vi": "Phí đăng ký là bao nhiêu tiền?"
+      },
+      {
+            "zh": "请帮我查一下预约记录。",
+            "pinyin": "qǐng bāng wǒ chá yī xià yù yuē jì lù.",
+            "vi": "Xin giúp tôi kiểm tra lịch đặt khám."
+      },
+      {
+            "zh": "我需要做血液检查吗？",
+            "pinyin": "wǒ xū yào zuò xuè yè jiǎn chá ma?",
+            "vi": "Tôi có cần làm xét nghiệm máu không?"
+      },
+      {
+            "zh": "请先去抽血，然后等结果。",
+            "pinyin": "qǐng xiān qù chōu xuě, rán hòu děng jié guǒ.",
+            "vi": "Xin đi lấy máu trước, rồi đợi kết quả."
+      },
+      {
+            "zh": "检查结果什么时候能出来？",
+            "pinyin": "jiǎn chá jié guǒ shén me shí hou néng chū lái?",
+            "vi": "Kết quả kiểm tra khi nào ra?"
+      },
+      {
+            "zh": "一般下午就能拿到报告。",
+            "pinyin": "yī bān xià wǔ jiù néng ná dào bào gào.",
+            "vi": "Thường chiều là lấy được báo cáo."
+      },
+      {
+            "zh": "我需要空腹做这项检查吗？",
+            "pinyin": "wǒ xū yào kōng fù zuò zhè xiàng jiǎn chá ma?",
+            "vi": "Tôi có cần nhịn ăn để làm xét nghiệm này không?"
+      },
+      {
+            "zh": "是的，早上不要吃东西。",
+            "pinyin": "shì de, zǎo shang bú yào chī dōng xi.",
+            "vi": "Đúng, sáng đừng ăn gì."
+      },
+      {
+            "zh": "请问化验室在几楼？",
+            "pinyin": "qǐng wèn huà yàn shì zài jǐ lóu?",
+            "vi": "Xin hỏi phòng xét nghiệm ở tầng mấy?"
+      },
+      {
+            "zh": "我的血压有点高，需要再测一次吗？",
+            "pinyin": "wǒ de xuè yā yǒu diǎn gāo, xū yào zài cè yī cì ma?",
+            "vi": "Huyết áp tôi hơi cao, có cần đo lại không?"
+      },
+      {
+            "zh": "X光检查需要预约吗？",
+            "pinyin": "X guāng jiǎn chá xū yào yù yuē ma?",
+            "vi": "Chụp X-quang có cần đặt trước không?"
+      },
+      {
+            "zh": "不需要，直接去放射科就行。",
+            "pinyin": "bù xū yào, zhí jiē qù fàng shè kē jiù xíng.",
+            "vi": "Không cần, đến thẳng khoa X-quang là được."
+      },
+      {
+            "zh": "请问这个检查有辐射吗？",
+            "pinyin": "qǐng wèn zhè ge jiǎn chá yǒu fú shè ma?",
+            "vi": "Xin hỏi xét nghiệm này có bức xạ không?"
+      },
+      {
+            "zh": "有一点，但剂量很小，不用担心。",
+            "pinyin": "yǒu yī diǎn, dàn jì liàng hěn xiǎo, bú yòng dān xīn.",
+            "vi": "Có một chút, nhưng liều lượng rất nhỏ, không cần lo."
+      },
+      {
+            "zh": "我需要做心电图检查。",
+            "pinyin": "wǒ xū yào zuò xīn diàn tú jiǎn chá.",
+            "vi": "Tôi cần làm điện tâm đồ."
+      },
+      {
+            "zh": "请躺下，我帮你贴电极。",
+            "pinyin": "qǐng tǎng xià, wǒ bāng nǐ tiē diàn jí.",
+            "vi": "Xin nằm xuống, tôi giúp bạn dán điện cực."
+      },
+      {
+            "zh": "检查报告出来了，请医生看一下。",
+            "pinyin": "jiǎn chá bào gào chū lái le, qǐng yī shēng kàn yī xià.",
+            "vi": "Báo cáo kiểm tra ra rồi, xin bác sĩ xem một chút."
+      },
+      {
+            "zh": "结果正常，没有什么大问题。",
+            "pinyin": "jié guǒ zhèng cháng, méi yǒu shén me dà wèn tí.",
+            "vi": "Kết quả bình thường, không có vấn đề lớn."
+      },
+      {
+            "zh": "我需要再复查一次吗？",
+            "pinyin": "wǒ xū yào zài fù chá yī cì ma?",
+            "vi": "Tôi có cần kiểm tra lại một lần nữa không?"
+      },
+      {
+            "zh": "一周后再来复查比较好。",
+            "pinyin": "yī zhōu hòu zài lái fù chá bǐ jiào hǎo.",
+            "vi": "Sau một tuần đến kiểm tra lại là tốt hơn."
+      },
+      {
+            "zh": "请问超声检查在哪里做？",
+            "pinyin": "qǐng wèn chāo shēng jiǎn chá zài nǎ lǐ zuò?",
+            "vi": "Xin hỏi siêu âm làm ở đâu?"
+      },
+      {
+            "zh": "在三楼超声科，先取号。",
+            "pinyin": "zài sān lóu chāo shēng kē, xiān qǔ hào.",
+            "vi": "Ở khoa siêu âm tầng 3, lấy số trước."
+      },
+      {
+            "zh": "这个药一天吃几次？",
+            "pinyin": "zhè ge yào yī tiān chī jǐ cì?",
+            "vi": "Thuốc này một ngày uống mấy lần?"
+      },
+      {
+            "zh": "一天三次，饭后吃。",
+            "pinyin": "yī tiān sān cì, fàn hòu chī.",
+            "vi": "Một ngày ba lần, uống sau ăn."
+      },
+      {
+            "zh": "这个药有没有副作用？",
+            "pinyin": "zhè ge yào yǒu méi yǒu fù zuò yòng?",
+            "vi": "Thuốc này có tác dụng phụ không?"
+      },
+      {
+            "zh": "可能会有点困，注意休息。",
+            "pinyin": "kě néng huì yǒu diǎn kùn, zhù yì xiū xi.",
+            "vi": "Có thể hơi buồn ngủ, chú ý nghỉ ngơi."
+      },
+      {
+            "zh": "我需要饭前吃还是饭后吃？",
+            "pinyin": "wǒ xū yào fàn qián chī hái shì fàn hòu chī?",
+            "vi": "Tôi cần uống trước ăn hay sau ăn?"
+      },
+      {
+            "zh": "饭后吃比较合适。",
+            "pinyin": "fàn hòu chī bǐ jiào hé shì.",
+            "vi": "Uống sau ăn là hợp lý hơn."
+      },
+      {
+            "zh": "这个药需要连续吃几天？",
+            "pinyin": "zhè ge yào xū yào lián xù chī jǐ tiān?",
+            "vi": "Thuốc này cần uống liên tục mấy ngày?"
+      },
+      {
+            "zh": "一般吃五到七天。",
+            "pinyin": "yī bān chī wǔ dào qī tiān.",
+            "vi": "Thường uống năm đến bảy ngày."
+      },
+      {
+            "zh": "我可以同时吃两种药吗？",
+            "pinyin": "wǒ kě yǐ tóng shí chī liǎng zhǒng yào ma?",
+            "vi": "Tôi có thể uống đồng thời hai loại thuốc không?"
+      },
+      {
+            "zh": "最好间隔半小时再吃。",
+            "pinyin": "zuì hǎo jiàn gé bàn xiǎo shí zài chī.",
+            "vi": "Tốt nhất cách nửa tiếng rồi mới uống."
+      },
+      {
+            "zh": "这个药需要冷藏保存吗？",
+            "pinyin": "zhè ge yào xū yào lěng cáng bǎo cún ma?",
+            "vi": "Thuốc này có cần bảo quản lạnh không?"
+      },
+      {
+            "zh": "不需要，常温保存就行。",
+            "pinyin": "bù xū yào, cháng wēn bǎo cún jiù xíng.",
+            "vi": "Không cần, bảo quản nhiệt độ thường là được."
+      },
+      {
+            "zh": "我忘记吃药了，现在补吃可以吗？",
+            "pinyin": "wǒ wàng jì chī yào le, xiàn zài bǔ chī kě yǐ ma?",
+            "vi": "Tôi quên uống thuốc, bây giờ uống bù được không?"
+      },
+      {
+            "zh": "如果时间不长，可以补吃。",
+            "pinyin": "rú guǒ shí jiān bù cháng, kě yǐ bǔ chī.",
+            "vi": "Nếu thời gian không lâu, có thể uống bù."
+      },
+      {
+            "zh": "这个药苦吗？小孩能吃吗？",
+            "pinyin": "zhè ge yào kǔ ma? xiǎo hái néng chī ma?",
+            "vi": "Thuốc này có đắng không? Trẻ em uống được không?"
+      },
+      {
+            "zh": "有点苦，可以兑一点水再喝。",
+            "pinyin": "yǒu diǎn kǔ, kě yǐ duì yī diǎn shuǐ zài hē.",
+            "vi": "Hơi đắng, có thể pha một chút nước rồi uống."
+      },
+      {
+            "zh": "我需要开点退烧药。",
+            "pinyin": "wǒ xū yào kāi diǎn tuì shāo yào.",
+            "vi": "Tôi cần kê một ít thuốc hạ sốt."
+      },
+      {
+            "zh": "先测一下体温，再决定用药。",
+            "pinyin": "xiān cè yī xià tǐ wēn, zài jué dìng yòng yào.",
+            "vi": "Đo nhiệt độ trước, rồi mới quyết định dùng thuốc."
+      },
+      {
+            "zh": "这个药吃完后需要复诊吗？",
+            "pinyin": "zhè ge yào chī wán hòu xū yào fù zhěn ma?",
+            "vi": "Uống hết thuốc này có cần khám lại không?"
+      },
+      {
+            "zh": "如果症状没好转，需要再来看。",
+            "pinyin": "rú guǒ zhèng zhuàng méi hǎo zhuǎn, xū yào zài lái kàn.",
+            "vi": "Nếu triệu chứng không đỡ, cần đến khám lại."
+      },
+      {
+            "zh": "我需要住院治疗吗？",
+            "pinyin": "wǒ xū yào zhù yuàn zhì liáo ma?",
+            "vi": "Tôi có cần nằm viện điều trị không?"
+      },
+      {
+            "zh": "建议住院观察几天比较好。",
+            "pinyin": "jiàn yì zhù yuàn guān chá jǐ tiān bǐ jiào hǎo.",
+            "vi": "Khuyên nằm viện theo dõi vài ngày là tốt hơn."
+      },
+      {
+            "zh": "请问病房在几楼？",
+            "pinyin": "qǐng wèn bìng fáng zài jǐ lóu?",
+            "vi": "Xin hỏi phòng bệnh ở tầng mấy?"
+      },
+      {
+            "zh": "在五楼，我带你过去。",
+            "pinyin": "zài wǔ lóu, wǒ dài nǐ guò qù.",
+            "vi": "Ở tầng 5, tôi dẫn bạn qua."
+      },
+      {
+            "zh": "住院需要带什么东西？",
+            "pinyin": "zhù yuàn xū yào dài shén me dōng xi?",
+            "vi": "Nằm viện cần mang những gì?"
+      },
+      {
+            "zh": "带换洗衣服和个人用品就行。",
+            "pinyin": "dài huàn xǐ yī fu hé gè rén yòng pǐn jiù xíng.",
+            "vi": "Mang quần áo thay và đồ dùng cá nhân là được."
+      },
+      {
+            "zh": "我可以有人陪护吗？",
+            "pinyin": "wǒ kě yǐ yǒu rén péi hù ma?",
+            "vi": "Tôi có thể có người chăm sóc không?"
+      },
+      {
+            "zh": "可以，但晚上需要登记。",
+            "pinyin": "kě yǐ, dàn wǎn shang xū yào dēng jì.",
+            "vi": "Được, nhưng tối cần đăng ký."
+      },
+      {
+            "zh": "每天几点可以探视？",
+            "pinyin": "měi tiān jǐ diǎn kě yǐ tàn shì?",
+            "vi": "Mỗi ngày mấy giờ có thể thăm bệnh?"
+      },
+      {
+            "zh": "下午两点到五点可以探视。",
+            "pinyin": "xià wǔ liǎng diǎn dào wǔ diǎn kě yǐ tàn shì.",
+            "vi": "Chiều hai giờ đến năm giờ có thể thăm."
+      },
+      {
+            "zh": "我需要打针还是输液？",
+            "pinyin": "wǒ xū yào dǎ zhēn hái shì shū yè?",
+            "vi": "Tôi cần tiêm hay truyền dịch?"
+      },
+      {
+            "zh": "先输液，观察一下情况。",
+            "pinyin": "xiān shū yè, guān chá yī xià qíng kuàng.",
+            "vi": "Truyền dịch trước, theo dõi tình hình một chút."
+      },
+      {
+            "zh": "护士，我的点滴快完了。",
+            "pinyin": "hù shi, wǒ de diǎn dī kuài wán le.",
+            "vi": "Y tá, truyền dịch của tôi sắp hết."
+      },
+      {
+            "zh": "我马上过来换。",
+            "pinyin": "wǒ mǎ shàng guò lái huàn.",
+            "vi": "Tôi qua thay ngay."
+      },
+      {
+            "zh": "晚上可以出去走走吗？",
+            "pinyin": "wǎn shang kě yǐ chū qù zǒu zou ma?",
+            "vi": "Tối có thể ra ngoài đi dạo không?"
+      },
+      {
+            "zh": "可以，但不要走太远。",
+            "pinyin": "kě yǐ, dàn bú yào zǒu tài yuǎn.",
+            "vi": "Được, nhưng đừng đi quá xa."
+      },
+      {
+            "zh": "我什么时候可以出院？",
+            "pinyin": "wǒ shén me shí hou kě yǐ chū yuàn?",
+            "vi": "Tôi khi nào có thể xuất viện?"
+      },
+      {
+            "zh": "如果指标正常，明天可以出院。",
+            "pinyin": "rú guǒ zhǐ biāo zhèng cháng, míng tiān kě yǐ chū yuàn.",
+            "vi": "Nếu chỉ số bình thường, ngày mai có thể xuất viện."
+      },
+      {
+            "zh": "出院后需要注意什么？",
+            "pinyin": "chū yuàn hòu xū yào zhù yì shén me?",
+            "vi": "Sau khi xuất viện cần chú ý gì?"
+      },
+      {
+            "zh": "注意休息，按时吃药，定期复查。",
+            "pinyin": "zhù yì xiū xi, àn shí chī yào, dìng qī fù chá.",
+            "vi": "Chú ý nghỉ ngơi, uống thuốc đúng giờ, kiểm tra định kỳ."
+      },
+      {
+            "zh": "我可以用医保报销吗？",
+            "pinyin": "wǒ kě yǐ yòng yī bǎo bào xiāo ma?",
+            "vi": "Tôi có thể dùng bảo hiểm y tế hoàn tiền không?"
+      },
+      {
+            "zh": "可以，带医保卡到窗口结算。",
+            "pinyin": "kě yǐ, dài yī bǎo kǎ dào chuāng kǒu jié suàn.",
+            "vi": "Được, mang thẻ bảo hiểm đến quầy thanh toán."
+      },
+      {
+            "zh": "这次住院大概要花多少钱？",
+            "pinyin": "zhè cì zhù yuàn dà gài yào huā duō shao qián?",
+            "vi": "Lần nằm viện này khoảng hết bao nhiêu tiền?"
+      },
+      {
+            "zh": "具体费用等结算时才能确定。",
+            "pinyin": "jù tǐ fèi yòng děng jié suàn shí cái néng què dìng.",
+            "vi": "Chi phí cụ thể đến lúc thanh toán mới xác định được."
+      },
+      {
+            "zh": "我可以先交押金吗？",
+            "pinyin": "wǒ kě yǐ xiān jiāo yā jīn ma?",
+            "vi": "Tôi có thể nộp tiền đặt cọc trước không?"
+      },
+      {
+            "zh": "可以，到收费处办理。",
+            "pinyin": "kě yǐ, dào shōu fèi chù bàn lǐ.",
+            "vi": "Được, đến chỗ thu phí làm thủ tục."
+      },
+      {
+            "zh": "医保卡余额不够怎么办？",
+            "pinyin": "yī bǎo kǎ yú é bù gòu zěn me bàn?",
+            "vi": "Số dư thẻ bảo hiểm không đủ thì làm sao?"
+      },
+      {
+            "zh": "可以自费补差额。",
+            "pinyin": "kě yǐ zì fèi bǔ chā é.",
+            "vi": "Có thể tự trả phần chênh lệch."
+      },
+      {
+            "zh": "请问发票在哪里开？",
+            "pinyin": "qǐng wèn fā piào zài nǎ lǐ kāi?",
+            "vi": "Xin hỏi hóa đơn xuất ở đâu?"
+      },
+      {
+            "zh": "结算后在收费窗口开。",
+            "pinyin": "jié suàn hòu zài shōu fèi chuāng kǒu kāi.",
+            "vi": "Sau khi thanh toán xuất ở quầy thu phí."
+      },
+      {
+            "zh": "我可以用微信或支付宝付款吗？",
+            "pinyin": "wǒ kě yǐ yòng Wēi xìn huò Zhī fù bǎo fù kuǎn ma?",
+            "vi": "Tôi có thể dùng WeChat hoặc Alipay thanh toán không?"
+      },
+      {
+            "zh": "可以，扫码付款就行。",
+            "pinyin": "kě yǐ, sǎo mǎ fù kuǎn jiù xíng.",
+            "vi": "Được, quét mã thanh toán là được."
+      },
+      {
+            "zh": "这次检查费用可以报销多少？",
+            "pinyin": "zhè cì jiǎn chá fèi yòng kě yǐ bào xiāo duō shao?",
+            "vi": "Chi phí kiểm tra lần này có thể hoàn bao nhiêu?"
+      },
+      {
+            "zh": "根据医保政策，大概报销百分之七十。",
+            "pinyin": "gēn jù yī bǎo zhèng cè, dà gài bào xiāo bǎi fēn zhī qī shí.",
+            "vi": "Theo chính sách bảo hiểm, khoảng hoàn 70%."
+      },
+      {
+            "zh": "我需要提前办理出院手续吗？",
+            "pinyin": "wǒ xū yào tí qián bàn lǐ chū yuàn shǒu xù ma?",
+            "vi": "Tôi có cần làm thủ tục xuất viện trước không?"
+      },
+      {
+            "zh": "需要，先到护士站办理。",
+            "pinyin": "xū yào, xiān dào hù shi zhàn bàn lǐ.",
+            "vi": "Cần, đến trạm y tá làm trước."
+      },
+      {
+            "zh": "商业保险可以同时报销吗？",
+            "pinyin": "shāng yè bǎo xiǎn kě yǐ tóng shí bào xiāo ma?",
+            "vi": "Bảo hiểm thương mại có thể hoàn cùng lúc không?"
+      },
+      {
+            "zh": "可以，但需要提供相关材料。",
+            "pinyin": "kě yǐ, dàn xū yào tí gōng xiāng guān cái liào.",
+            "vi": "Được, nhưng cần cung cấp tài liệu liên quan."
+      },
+      {
+            "zh": "费用清单在哪里查看？",
+            "pinyin": "fèi yòng qīng dān zài nǎ lǐ chá kàn?",
+            "vi": "Danh sách chi phí xem ở đâu?"
+      },
+      {
+            "zh": "在收费窗口或手机App上查看。",
+            "pinyin": "zài shōu fèi chuāng kǒu huò shǒu jī App shàng chá kàn.",
+            "vi": "Xem ở quầy thu phí hoặc trên app điện thoại."
+      },
+      {
+            "zh": "我需要急诊，怎么走？",
+            "pinyin": "wǒ xū yào jí zhěn, zěn me zǒu?",
+            "vi": "Tôi cần cấp cứu, đi thế nào?"
+      },
+      {
+            "zh": "急诊在一楼，跟着绿色标识走。",
+            "pinyin": "jí zhěn zài yī lóu, gēn zhe lǜ sè biāo zhì zǒu.",
+            "vi": "Cấp cứu ở tầng 1, đi theo biển xanh lá."
+      },
+      {
+            "zh": "病人突然晕倒了，怎么办？",
+            "pinyin": "bìng rén tū rán yūn dǎo le, zěn me bàn?",
+            "vi": "Bệnh nhân đột nhiên ngất, làm sao?"
+      },
+      {
+            "zh": "马上叫医生，先让他平躺。",
+            "pinyin": "mǎ shàng jiào yī shēng, xiān ràng tā píng tǎng.",
+            "vi": "Gọi bác sĩ ngay, trước để anh ấy nằm ngửa."
+      },
+      {
+            "zh": "我胸口很痛，可能是心脏问题。",
+            "pinyin": "wǒ xiōng kǒu hěn tòng, kě néng shì xīn zàng wèn tí.",
+            "vi": "Ngực tôi rất đau, có thể là vấn đề tim."
+      },
+      {
+            "zh": "请马上到急诊，我帮你叫医生。",
+            "pinyin": "qǐng mǎ shàng dào jí zhěn, wǒ bāng nǐ jiào yī shēng.",
+            "vi": "Xin đến cấp cứu ngay, tôi giúp bạn gọi bác sĩ."
+      },
+      {
+            "zh": "有人受伤流血了，需要急救。",
+            "pinyin": "yǒu rén shòu shāng liú xuě le, xū yào jí jiù.",
+            "vi": "Có người bị thương chảy máu, cần cấp cứu."
+      },
+      {
+            "zh": "先用干净的布按住伤口。",
+            "pinyin": "xiān yòng gān jìng de bù àn zhù shāng kǒu.",
+            "vi": "Trước dùng vải sạch ấn vào vết thương."
+      },
+      {
+            "zh": "请问急诊室现在忙吗？",
+            "pinyin": "qǐng wèn jí zhěn shì xiàn zài máng ma?",
+            "vi": "Xin hỏi phòng cấp cứu hiện có bận không?"
+      },
+      {
+            "zh": "比较忙，但紧急情况会优先处理。",
+            "pinyin": "bǐ jiào máng, dàn jǐn jí qíng kuàng huì yōu xiān chǔ lǐ.",
+            "vi": "Khá bận, nhưng trường hợp khẩn cấp sẽ ưu tiên xử lý."
+      },
+      {
+            "zh": "我呼吸困难，需要吸氧吗？",
+            "pinyin": "wǒ hū xī kùn nan, xū yào xī yǎng ma?",
+            "vi": "Tôi thở khó, có cần thở oxy không?"
+      },
+      {
+            "zh": "先测一下血氧，再决定。",
+            "pinyin": "xiān cè yī xià xuè yǎng, zài jué dìng.",
+            "vi": "Đo oxy máu trước, rồi quyết định."
+      },
+      {
+            "zh": "请帮我叫救护车。",
+            "pinyin": "qǐng bāng wǒ jiào jiù hù chē.",
+            "vi": "Xin giúp tôi gọi xe cứu thương."
+      },
+      {
+            "zh": "已经叫了，马上就到。",
+            "pinyin": "yǐ jīng jiào le, mǎ shàng jiù dào.",
+            "vi": "Đã gọi rồi, sắp đến ngay."
+      },
+      {
+            "zh": "病人发烧很高，需要处理吗？",
+            "pinyin": "bìng rén fā shāo hěn gāo, xū yào chǔ lǐ ma?",
+            "vi": "Bệnh nhân sốt rất cao, có cần xử lý không?"
+      },
+      {
+            "zh": "先物理降温，再测体温。",
+            "pinyin": "xiān wù lǐ jiàng wēn, zài cè tǐ wēn.",
+            "vi": "Trước hạ nhiệt bằng phương pháp vật lý, rồi đo nhiệt độ."
+      },
+      {
+            "zh": "我需要马上做心电图。",
+            "pinyin": "wǒ xū yào mǎ shàng zuò xīn diàn tú.",
+            "vi": "Tôi cần làm điện tâm đồ ngay."
+      },
+      {
+            "zh": "请跟我来，急诊室有设备。",
+            "pinyin": "qǐng gēn wǒ lái, jí zhěn shì yǒu shè bèi.",
+            "vi": "Xin theo tôi, phòng cấp cứu có thiết bị."
+      },
+      {
+            "zh": "家属在哪里等比较合适？",
+            "pinyin": "jiā shǔ zài nǎ lǐ děng bǐ jiào hé shì?",
+            "vi": "Người nhà đợi ở đâu là hợp lý hơn?"
+      },
+      {
+            "zh": "在急诊门口等候区等。",
+            "pinyin": "zài jí zhěn mén kǒu děng hòu qū děng.",
+            "vi": "Đợi ở khu chờ cửa cấp cứu."
+      },
+      {
+            "zh": "你最近身体怎么样？",
+            "pinyin": "nǐ zuì jìn shēn tǐ zěn me yàng?",
+            "vi": "Gần đây sức khỏe bạn thế nào?"
+      },
+      {
+            "zh": "还行，就是有点累。",
+            "pinyin": "hái xíng, jiù shì yǒu diǎn lèi.",
+            "vi": "Ổn, chỉ là hơi mệt."
+      },
+      {
+            "zh": "多喝热水，注意休息。",
+            "pinyin": "duō hē rè shuǐ, zhù yì xiū xi.",
+            "vi": "Uống nhiều nước nóng, chú ý nghỉ ngơi."
+      },
+      {
+            "zh": "我最近睡眠不太好。",
+            "pinyin": "wǒ zuì jìn shuì mián bú tài hǎo.",
+            "vi": "Gần đây giấc ngủ tôi không tốt lắm."
+      },
+      {
+            "zh": "试试早点睡，少看手机。",
+            "pinyin": "shì shi zǎo diǎn shuì, shǎo kàn shǒu jī.",
+            "vi": "Thử ngủ sớm, ít xem điện thoại."
+      },
+      {
+            "zh": "你有没有定期体检？",
+            "pinyin": "nǐ yǒu méi yǒu dìng qī tǐ jiǎn?",
+            "vi": "Bạn có khám sức khỏe định kỳ không?"
+      },
+      {
+            "zh": "有，公司每年组织一次。",
+            "pinyin": "yǒu, gōng sī měi nián zǔ zhī yī cì.",
+            "vi": "Có, công ty mỗi năm tổ chức một lần."
+      },
+      {
+            "zh": "我感觉压力有点大。",
+            "pinyin": "wǒ gǎn jué yā lì yǒu diǎn dà.",
+            "vi": "Tôi cảm thấy áp lực hơi lớn."
+      },
+      {
+            "zh": "适当运动可以缓解压力。",
+            "pinyin": "shì dàng yùn dòng kě yǐ huǎn jiě yā lì.",
+            "vi": "Vận động vừa phải có thể giảm áp lực."
+      },
+      {
+            "zh": "你最近食欲怎么样？",
+            "pinyin": "nǐ zuì jìn shí yù zěn me yàng?",
+            "vi": "Gần đây khẩu vị bạn thế nào?"
+      },
+      {
+            "zh": "还行，就是有时候不太想吃。",
+            "pinyin": "hái xíng, jiù shì yǒu shí hou bú tài xiǎng chī.",
+            "vi": "Ổn, chỉ là đôi khi không muốn ăn."
+      },
+      {
+            "zh": "注意营养均衡，不要节食。",
+            "pinyin": "zhù yì yíng yǎng jūn héng, bú yào jié shí.",
+            "vi": "Chú ý dinh dưỡng cân bằng, đừng ăn kiêng."
+      },
+      {
+            "zh": "我腰有点疼，是不是坐太久了？",
+            "pinyin": "wǒ yāo yǒu diǎn téng, shì bu shì zuò tài jiǔ le?",
+            "vi": "Lưng tôi hơi đau, có phải ngồi lâu quá không?"
+      },
+      {
+            "zh": "可能是，多起来活动一下。",
+            "pinyin": "kě néng shì, duō qǐ lái huó dòng yī xià.",
+            "vi": "Có thể, đứng dậy vận động nhiều hơn."
+      },
+      {
+            "zh": "你有没有过敏史？",
+            "pinyin": "nǐ yǒu méi yǒu guò mǐn shǐ?",
+            "vi": "Bạn có tiền sử dị ứng không?"
+      },
+      {
+            "zh": "有，对花粉过敏。",
+            "pinyin": "yǒu, duì huā fěn guò mǐn.",
+            "vi": "Có, dị ứng phấn hoa."
+      },
+      {
+            "zh": "天气变化大，注意保暖。",
+            "pinyin": "tiān qì biàn huà dà, zhù yì bǎo nuǎn.",
+            "vi": "Thời tiết thay đổi nhiều, chú ý giữ ấm."
+      },
+      {
+            "zh": "我会注意的，谢谢提醒。",
+            "pinyin": "wǒ huì zhù yì de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ chú ý, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "最近有点上火，喉咙不舒服。",
+            "pinyin": "zuì jìn yǒu diǎn shàng huǒ, hóu lóng bù shū fu.",
+            "vi": "Gần đây hơi nóng trong người, họng không khỏe."
+      },
+      {
+            "zh": "多喝水，少吃辛辣的。",
+            "pinyin": "duō hē shuǐ, shǎo chī xīn là de.",
+            "vi": "Uống nhiều nước, ít ăn cay."
+      },
+      {
+            "zh": "我需要打流感疫苗吗？",
+            "pinyin": "wǒ xū yào dǎ liú gǎn yì miáo ma?",
+            "vi": "Tôi có cần tiêm vaccine cúm không?"
+      },
+      {
+            "zh": "建议打，可以预防流感。",
+            "pinyin": "jiàn yì dǎ, kě yǐ yù fáng liú gǎn.",
+            "vi": "Khuyên nên tiêm, có thể phòng cúm."
+      },
+      {
+            "zh": "洗手很重要，能预防很多病。",
+            "pinyin": "xǐ shǒu hěn zhòng yào, néng yù fáng hěn duō bìng.",
+            "vi": "Rửa tay rất quan trọng, có thể phòng nhiều bệnh."
+      },
+      {
+            "zh": "我会注意经常洗手。",
+            "pinyin": "wǒ huì zhù yì jīng cháng xǐ shǒu.",
+            "vi": "Tôi sẽ chú ý rửa tay thường xuyên."
+      },
+      {
+            "zh": "戴口罩可以减少感染风险。",
+            "pinyin": "dài kǒu zhào kě yǐ jiǎn shǎo gǎn rǎn fēng xiǎn.",
+            "vi": "Đeo khẩu trang có thể giảm nguy cơ lây nhiễm."
+      },
+      {
+            "zh": "在人多的地方我会戴口罩。",
+            "pinyin": "zài rén duō de dì fang wǒ huì dài kǒu zhào.",
+            "vi": "Ở chỗ đông người tôi sẽ đeo khẩu trang."
+      },
+      {
+            "zh": "多运动有助于提高免疫力。",
+            "pinyin": "duō yùn dòng yǒu zhù yú tí gāo miǎn yì lì.",
+            "vi": "Vận động nhiều giúp nâng cao miễn dịch."
+      },
+      {
+            "zh": "我每周会跑步两次。",
+            "pinyin": "wǒ měi zhōu huì pǎo bù liǎng cì.",
+            "vi": "Tôi mỗi tuần sẽ chạy bộ hai lần."
+      },
+      {
+            "zh": "注意饮食卫生，少吃生冷食物。",
+            "pinyin": "zhù yì yǐn shí wèi shēng, shǎo chī shēng lěng shí wù.",
+            "vi": "Chú ý vệ sinh ăn uống, ít ăn đồ sống lạnh."
+      },
+      {
+            "zh": "我会注意的，谢谢提醒。",
+            "pinyin": "wǒ huì zhù yì de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ chú ý, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "定期体检可以早发现问题。",
+            "pinyin": "dìng qī tǐ jiǎn kě yǐ zǎo fā xiàn wèn tí.",
+            "vi": "Khám sức khỏe định kỳ có thể phát hiện vấn đề sớm."
+      },
+      {
+            "zh": "我计划明年做一次全面体检。",
+            "pinyin": "wǒ jì huà míng nián zuò yī cì quán miàn tǐ jiǎn.",
+            "vi": "Tôi dự định năm sau làm một lần khám tổng quát."
+      },
+      {
+            "zh": "保持良好作息对身体很重要。",
+            "pinyin": "bǎo chí liáng hǎo zuò xī duì shēn tǐ hěn zhòng yào.",
+            "vi": "Giữ thói quen sinh hoạt tốt rất quan trọng với cơ thể."
+      },
+      {
+            "zh": "我会尽量早睡早起。",
+            "pinyin": "wǒ huì jǐn liàng zǎo shuì zǎo qǐ.",
+            "vi": "Tôi sẽ cố gắng ngủ sớm dậy sớm."
+      },
+      {
+            "zh": "天气干燥，多喝水可以预防。",
+            "pinyin": "tiān qì gān zào, duō hē shuǐ kě yǐ yù fáng.",
+            "vi": "Thời tiết khô, uống nhiều nước có thể phòng ngừa."
+      },
+      {
+            "zh": "我会多喝水的。",
+            "pinyin": "wǒ huì duō hē shuǐ de.",
+            "vi": "Tôi sẽ uống nhiều nước."
+      },
+      {
+            "zh": "工作压力大时要注意放松。",
+            "pinyin": "gōng zuò yā lì dà shí yào zhù yì fàng sōng.",
+            "vi": "Khi áp lực công việc lớn cần chú ý thư giãn."
+      },
+      {
+            "zh": "我会适当休息，别太累。",
+            "pinyin": "wǒ huì shì dàng xiū xi, bié tài lèi.",
+            "vi": "Tôi sẽ nghỉ ngơi vừa phải, đừng quá mệt."
+      },
+      {
+            "zh": "家人有慢性病，需要特别注意。",
+            "pinyin": "jiā rén yǒu màn xìng bìng, xū yào tè bié zhù yì.",
+            "vi": "Người nhà có bệnh mãn tính, cần chú ý đặc biệt."
+      },
+      {
+            "zh": "我会定期陪他们复查。",
+            "pinyin": "wǒ huì dìng qī péi tā men fù chá.",
+            "vi": "Tôi sẽ định kỳ đưa họ đi kiểm tra lại."
+      },
+      {
+            "zh": "我头疼发烧，需要去医院看看。",
+            "pinyin": "wǒ tóu téng fā shāo, xū yào qù yī yuàn kàn kan.",
+            "vi": "Tôi đau đầu sốt, cần đến bệnh viện khám."
+      },
+      {
+            "zh": "请问挂号在哪里？我挂内科。",
+            "pinyin": "qǐng wèn guà hào zài nǎ lǐ? wǒ guà nèi kē.",
+            "vi": "Xin hỏi đăng ký ở đâu? Tôi đăng ký khoa nội."
+      },
+      {
+            "zh": "医生说我需要做血液检查。",
+            "pinyin": "yī shēng shuō wǒ xū yào zuò xuè yè jiǎn chá.",
+            "vi": "Bác sĩ nói tôi cần làm xét nghiệm máu."
+      },
+      {
+            "zh": "检查结果出来了，没有大问题。",
+            "pinyin": "jiǎn chá jié guǒ chū lái le, méi yǒu dà wèn tí.",
+            "vi": "Kết quả kiểm tra ra rồi, không có vấn đề lớn."
+      },
+      {
+            "zh": "这个药一天三次，饭后吃。",
+            "pinyin": "zhè ge yào yī tiān sān cì, fàn hòu chī.",
+            "vi": "Thuốc này một ngày ba lần, uống sau ăn."
+      },
+      {
+            "zh": "我需要住院观察几天。",
+            "pinyin": "wǒ xū yào zhù yuàn guān chá jǐ tiān.",
+            "vi": "Tôi cần nằm viện theo dõi vài ngày."
+      },
+      {
+            "zh": "可以用医保报销，带医保卡结算。",
+            "pinyin": "kě yǐ yòng yī bǎo bào xiāo, dài yī bǎo kǎ jié suàn.",
+            "vi": "Có thể dùng bảo hiểm hoàn, mang thẻ bảo hiểm thanh toán."
+      },
+      {
+            "zh": "我胸口痛，需要马上去急诊。",
+            "pinyin": "wǒ xiōng kǒu tòng, xū yào mǎ shàng qù jí zhěn.",
+            "vi": "Ngực tôi đau, cần đến cấp cứu ngay."
+      },
+      {
+            "zh": "多喝热水，注意休息，很快会好。",
+            "pinyin": "duō hē rè shuǐ, zhù yì xiū xi, hěn kuài huì hǎo.",
+            "vi": "Uống nhiều nước nóng, chú ý nghỉ ngơi, sẽ nhanh khỏi."
+      },
+      {
+            "zh": "我最近睡眠不好，有什么建议？",
+            "pinyin": "wǒ zuì jìn shuì mián bù hǎo, yǒu shén me jiàn yì?",
+            "vi": "Gần đây tôi ngủ không ngon, có gợi ý gì?"
+      },
+      {
+            "zh": "试试早点睡，少看手机。",
+            "pinyin": "shì shi zǎo diǎn shuì, shǎo kàn shǒu jī.",
+            "vi": "Thử ngủ sớm, ít xem điện thoại."
+      },
+      {
+            "zh": "我需要打疫苗预防流感吗？",
+            "pinyin": "wǒ xū yào dǎ yì miáo yù fáng liú gǎn ma?",
+            "vi": "Tôi có cần tiêm vaccine phòng cúm không?"
+      },
+      {
+            "zh": "建议打，可以减少感染风险。",
+            "pinyin": "jiàn yì dǎ, kě yǐ jiǎn shǎo gǎn rǎn fēng xiǎn.",
+            "vi": "Khuyên nên tiêm, có thể giảm nguy cơ lây nhiễm."
+      },
+      {
+            "zh": "出院后要注意休息，按时吃药。",
+            "pinyin": "chū yuàn hòu yào zhù yì xiū xi, àn shí chī yào.",
+            "vi": "Sau khi xuất viện chú ý nghỉ ngơi, uống thuốc đúng giờ."
+      },
+      {
+            "zh": "我有点上火，喉咙不舒服。",
+            "pinyin": "wǒ yǒu diǎn shàng huǒ, hóu lóng bù shū fu.",
+            "vi": "Tôi hơi nóng trong người, họng không khỏe."
+      },
+      {
+            "zh": "多喝水，少吃辛辣的食物。",
+            "pinyin": "duō hē shuǐ, shǎo chī xīn là de shí wù.",
+            "vi": "Uống nhiều nước, ít ăn đồ cay."
+      },
+      {
+            "zh": "请帮我叫医生，病人情况不好。",
+            "pinyin": "qǐng bāng wǒ jiào yī shēng, bìng rén qíng kuàng bù hǎo.",
+            "vi": "Xin giúp tôi gọi bác sĩ, tình trạng bệnh nhân không tốt."
+      },
+      {
+            "zh": "费用可以用医保报销一部分。",
+            "pinyin": "fèi yòng kě yǐ yòng yī bǎo bào xiāo yī bù fen.",
+            "vi": "Chi phí có thể dùng bảo hiểm hoàn một phần."
+      },
+      {
+            "zh": "注意个人卫生，可以预防很多疾病。",
+            "pinyin": "zhù yì gè rén wèi shēng, kě yǐ yù fáng hěn duō jí bìng.",
+            "vi": "Chú ý vệ sinh cá nhân, có thể phòng nhiều bệnh."
+      },
+      {
+            "zh": "祝你早日康复，注意身体。",
+            "pinyin": "zhù nǐ zǎo rì kāng fù, zhù yì shēn tǐ.",
+            "vi": "Chúc bạn sớm khỏe lại, chú ý sức khỏe."
+      }
+]
+  },
+  "BENH_VIEN-2": {
+    title: "🏥 Bệnh viện và sức khỏe phần 2",
+    color: "#d32f2f",
+    sections: [
+      {
+            "name": "Tình huống tổng hợp 1",
+            "start": 0
+      },
+      {
+            "name": "Tình huống tổng hợp 2",
+            "start": 20
+      },
+      {
+            "name": "Tình huống tổng hợp 3",
+            "start": 40
+      },
+      {
+            "name": "Tình huống tổng hợp 4",
+            "start": 60
+      },
+      {
+            "name": "Tình huống tổng hợp 5",
+            "start": 80
+      },
+      {
+            "name": "Tình huống tổng hợp 6",
+            "start": 100
+      },
+      {
+            "name": "Tình huống tổng hợp 7",
+            "start": 120
+      },
+      {
+            "name": "Tình huống tổng hợp 8",
+            "start": 140
+      },
+      {
+            "name": "Tình huống tổng hợp 9",
+            "start": 160
+      },
+      {
+            "name": "Tình huống tổng hợp 10",
+            "start": 180
+      }
+],
+    sentences: [
+      {
+            "zh": "我最近感觉身体有点不舒服。",
+            "pinyin": "wǒ zuì jìn gǎn jué shēn tǐ yǒu diǎn bù shū fu.",
+            "vi": "Gần đây tôi cảm thấy cơ thể hơi không khỏe."
+      },
+      {
+            "zh": "我头疼了两天，还有点发烧。",
+            "pinyin": "wǒ tóu téng le liǎng tiān, hái yǒu diǎn fā shāo.",
+            "vi": "Tôi đau đầu hai ngày rồi, còn hơi sốt."
+      },
+      {
+            "zh": "嗓子很痛，说话都有点困难。",
+            "pinyin": "sǎng zi hěn tòng, shuō huà dōu yǒu diǎn kùn nan.",
+            "vi": "Họng rất đau, nói chuyện cũng hơi khó."
+      },
+      {
+            "zh": "我咳嗽得很厉害，晚上睡不好。",
+            "pinyin": "wǒ ké sòu de hěn lì hai, wǎn shang shuì bù hǎo.",
+            "vi": "Tôi ho rất nhiều, tối ngủ không ngon."
+      },
+      {
+            "zh": "肚子不舒服，可能是吃坏东西了。",
+            "pinyin": "dù zi bù shū fu, kě néng shì chī huài dōng xi le.",
+            "vi": "Bụng không khỏe, có thể ăn phải đồ xấu."
+      },
+      {
+            "zh": "我全身没力气，感觉很累。",
+            "pinyin": "wǒ quán shēn méi lì qi, gǎn jué hěn lèi.",
+            "vi": "Tôi toàn thân không có sức, cảm thấy rất mệt."
+      },
+      {
+            "zh": "鼻子堵住了，呼吸有点困难。",
+            "pinyin": "bí zi dǔ zhù le, hū xī yǒu diǎn kùn nan.",
+            "vi": "Mũi bị tắc, thở hơi khó."
+      },
+      {
+            "zh": "我皮肤起疹子了，很痒。",
+            "pinyin": "wǒ pí fū qǐ zhěn zi le, hěn yǎng.",
+            "vi": "Da tôi nổi mẩn, rất ngứa."
+      },
+      {
+            "zh": "胸口有点闷，呼吸不太顺畅。",
+            "pinyin": "xiōng kǒu yǒu diǎn mèn, hū xī bú tài shùn chàng.",
+            "vi": "Ngực hơi tức, thở không thông lắm."
+      },
+      {
+            "zh": "我拉肚子已经两天了。",
+            "pinyin": "wǒ lā dù zi yǐ jīng liǎng tiān le.",
+            "vi": "Tôi bị tiêu chảy đã hai ngày rồi."
+      },
+      {
+            "zh": "关节有点疼，活动不太方便。",
+            "pinyin": "guān jié yǒu diǎn téng, huó dòng bú tài fāng biàn.",
+            "vi": "Khớp hơi đau, hoạt động không tiện lắm."
+      },
+      {
+            "zh": "眼睛很红，还有点肿。",
+            "pinyin": "yǎn jing hěn hóng, hái yǒu diǎn zhǒng.",
+            "vi": "Mắt rất đỏ, còn hơi sưng."
+      },
+      {
+            "zh": "我最近失眠，晚上很难入睡。",
+            "pinyin": "wǒ zuì jìn shī mián, wǎn shang hěn nán rù shuì.",
+            "vi": "Gần đây tôi mất ngủ, tối rất khó vào giấc."
+      },
+      {
+            "zh": "头晕，站起来的时候更明显。",
+            "pinyin": "tóu yūn, zhàn qǐ lái de shí hou gèng míng xiǎn.",
+            "vi": "Chóng mặt, lúc đứng dậy càng rõ."
+      },
+      {
+            "zh": "我牙疼得很厉害，影响吃饭。",
+            "pinyin": "wǒ yá téng de hěn lì hai, yǐng xiǎng chī fàn.",
+            "vi": "Tôi đau răng rất nhiều, ảnh hưởng ăn cơm."
+      },
+      {
+            "zh": "背部有点疼，可能是坐太久了。",
+            "pinyin": "bèi bù yǒu diǎn téng, kě néng shì zuò tài jiǔ le.",
+            "vi": "Lưng hơi đau, có thể ngồi lâu quá."
+      },
+      {
+            "zh": "我感觉喉咙里有异物感。",
+            "pinyin": "wǒ gǎn jué hóu lóng lǐ yǒu yì wù gǎn.",
+            "vi": "Tôi cảm thấy trong họng có cảm giác dị vật."
+      },
+      {
+            "zh": "最近食欲不好，吃什么都没味道。",
+            "pinyin": "zuì jìn shí yù bù hǎo, chī shén me dōu méi wèi dào.",
+            "vi": "Gần đây chán ăn, ăn gì cũng không ngon."
+      },
+      {
+            "zh": "我流鼻血了，需要处理一下。",
+            "pinyin": "wǒ liú bí xuě le, xū yào chǔ lǐ yī xià.",
+            "vi": "Tôi bị chảy máu mũi, cần xử lý một chút."
+      },
+      {
+            "zh": "手脚有点发麻，是什么原因？",
+            "pinyin": "shǒu jiǎo yǒu diǎn fā má, shì shén me yuán yīn?",
+            "vi": "Tay chân hơi tê, là nguyên nhân gì?"
+      },
+      {
+            "zh": "请问挂号在哪里办理？",
+            "pinyin": "qǐng wèn guà hào zài nǎ lǐ bàn lǐ?",
+            "vi": "Xin hỏi đăng ký khám ở đâu?"
+      },
+      {
+            "zh": "我需要挂内科的号。",
+            "pinyin": "wǒ xū yào guà nèi kē de hào.",
+            "vi": "Tôi cần đăng ký khoa nội."
+      },
+      {
+            "zh": "今天专家号还有吗？",
+            "pinyin": "jīn tiān zhuān jiā hào hái yǒu ma?",
+            "vi": "Hôm nay còn số chuyên gia không?"
+      },
+      {
+            "zh": "普通门诊现在可以挂号吗？",
+            "pinyin": "pǔ tōng mén zhěn xiàn zài kě yǐ guà hào ma?",
+            "vi": "Khám thông thường bây giờ có thể đăng ký không?"
+      },
+      {
+            "zh": "请问内科在几楼？",
+            "pinyin": "qǐng wèn nèi kē zài jǐ lóu?",
+            "vi": "Xin hỏi khoa nội ở tầng mấy?"
+      },
+      {
+            "zh": "我第一次来，不太熟悉流程。",
+            "pinyin": "wǒ dì yī cì lái, bú tài shóu xī liú chéng.",
+            "vi": "Tôi lần đầu đến, chưa quen quy trình."
+      },
+      {
+            "zh": "需要带身份证才能挂号吗？",
+            "pinyin": "xū yào dài shēn fèn zhèng cái néng guà hào ma?",
+            "vi": "Có cần mang chứng minh thư mới đăng ký được không?"
+      },
+      {
+            "zh": "我预约了下午两点的号。",
+            "pinyin": "wǒ yù yuē le xià wǔ liǎng diǎn de hào.",
+            "vi": "Tôi đã đặt số hai giờ chiều."
+      },
+      {
+            "zh": "排队的人很多，要等多久？",
+            "pinyin": "pái duì de rén hěn duō, yào děng duō jiǔ?",
+            "vi": "Người xếp hàng nhiều, phải đợi bao lâu?"
+      },
+      {
+            "zh": "请问儿科在哪个方向？",
+            "pinyin": "qǐng wèn ér kē zài nǎ ge fāng xiàng?",
+            "vi": "Xin hỏi khoa nhi ở hướng nào?"
+      },
+      {
+            "zh": "我可以先取号再去候诊吗？",
+            "pinyin": "wǒ kě yǐ xiān qǔ hào zài qù hòu zhěn ma?",
+            "vi": "Tôi có thể lấy số trước rồi đến phòng chờ không?"
+      },
+      {
+            "zh": "医生现在在看诊吗？",
+            "pinyin": "yī shēng xiàn zài zài kàn zhěn ma?",
+            "vi": "Bác sĩ hiện đang khám không?"
+      },
+      {
+            "zh": "我需要转诊到其他科室。",
+            "pinyin": "wǒ xū yào zhuǎn zhěn dào qí tā kē shì.",
+            "vi": "Tôi cần chuyển sang khoa khác."
+      },
+      {
+            "zh": "请问收费窗口在哪里？",
+            "pinyin": "qǐng wèn shōu fèi chuāng kǒu zài nǎ lǐ?",
+            "vi": "Xin hỏi quầy thu phí ở đâu?"
+      },
+      {
+            "zh": "我可以在手机上挂号吗？",
+            "pinyin": "wǒ kě yǐ zài shǒu jī shàng guà hào ma?",
+            "vi": "Tôi có thể đăng ký trên điện thoại không?"
+      },
+      {
+            "zh": "今天上午的号已经挂完了。",
+            "pinyin": "jīn tiān shàng wǔ de hào yǐ jīng guà wán le.",
+            "vi": "Số buổi sáng hôm nay đã hết rồi."
+      },
+      {
+            "zh": "请问护士站在几号诊室旁边？",
+            "pinyin": "qǐng wèn hù shi zhàn zài jǐ hào zhěn shì páng biān?",
+            "vi": "Xin hỏi trạm y tá ở bên cạnh phòng khám số mấy?"
+      },
+      {
+            "zh": "我需要复诊，带上次的病历了。",
+            "pinyin": "wǒ xū yào fù zhěn, dài shàng cì de bìng lì le.",
+            "vi": "Tôi cần khám lại, đã mang bệnh án lần trước."
+      },
+      {
+            "zh": "挂号费是多少钱？",
+            "pinyin": "guà hào fèi shì duō shao qián?",
+            "vi": "Phí đăng ký là bao nhiêu tiền?"
+      },
+      {
+            "zh": "请帮我查一下预约记录。",
+            "pinyin": "qǐng bāng wǒ chá yī xià yù yuē jì lù.",
+            "vi": "Xin giúp tôi kiểm tra lịch đặt khám."
+      },
+      {
+            "zh": "我需要做血液检查吗？",
+            "pinyin": "wǒ xū yào zuò xuè yè jiǎn chá ma?",
+            "vi": "Tôi có cần làm xét nghiệm máu không?"
+      },
+      {
+            "zh": "请先去抽血，然后等结果。",
+            "pinyin": "qǐng xiān qù chōu xuě, rán hòu děng jié guǒ.",
+            "vi": "Xin đi lấy máu trước, rồi đợi kết quả."
+      },
+      {
+            "zh": "检查结果什么时候能出来？",
+            "pinyin": "jiǎn chá jié guǒ shén me shí hou néng chū lái?",
+            "vi": "Kết quả kiểm tra khi nào ra?"
+      },
+      {
+            "zh": "一般下午就能拿到报告。",
+            "pinyin": "yī bān xià wǔ jiù néng ná dào bào gào.",
+            "vi": "Thường chiều là lấy được báo cáo."
+      },
+      {
+            "zh": "我需要空腹做这项检查吗？",
+            "pinyin": "wǒ xū yào kōng fù zuò zhè xiàng jiǎn chá ma?",
+            "vi": "Tôi có cần nhịn ăn để làm xét nghiệm này không?"
+      },
+      {
+            "zh": "是的，早上不要吃东西。",
+            "pinyin": "shì de, zǎo shang bú yào chī dōng xi.",
+            "vi": "Đúng, sáng đừng ăn gì."
+      },
+      {
+            "zh": "请问化验室在几楼？",
+            "pinyin": "qǐng wèn huà yàn shì zài jǐ lóu?",
+            "vi": "Xin hỏi phòng xét nghiệm ở tầng mấy?"
+      },
+      {
+            "zh": "我的血压有点高，需要再测一次吗？",
+            "pinyin": "wǒ de xuè yā yǒu diǎn gāo, xū yào zài cè yī cì ma?",
+            "vi": "Huyết áp tôi hơi cao, có cần đo lại không?"
+      },
+      {
+            "zh": "X光检查需要预约吗？",
+            "pinyin": "X guāng jiǎn chá xū yào yù yuē ma?",
+            "vi": "Chụp X-quang có cần đặt trước không?"
+      },
+      {
+            "zh": "不需要，直接去放射科就行。",
+            "pinyin": "bù xū yào, zhí jiē qù fàng shè kē jiù xíng.",
+            "vi": "Không cần, đến thẳng khoa X-quang là được."
+      },
+      {
+            "zh": "请问这个检查有辐射吗？",
+            "pinyin": "qǐng wèn zhè ge jiǎn chá yǒu fú shè ma?",
+            "vi": "Xin hỏi xét nghiệm này có bức xạ không?"
+      },
+      {
+            "zh": "有一点，但剂量很小，不用担心。",
+            "pinyin": "yǒu yī diǎn, dàn jì liàng hěn xiǎo, bú yòng dān xīn.",
+            "vi": "Có một chút, nhưng liều lượng rất nhỏ, không cần lo."
+      },
+      {
+            "zh": "我需要做心电图检查。",
+            "pinyin": "wǒ xū yào zuò xīn diàn tú jiǎn chá.",
+            "vi": "Tôi cần làm điện tâm đồ."
+      },
+      {
+            "zh": "请躺下，我帮你贴电极。",
+            "pinyin": "qǐng tǎng xià, wǒ bāng nǐ tiē diàn jí.",
+            "vi": "Xin nằm xuống, tôi giúp bạn dán điện cực."
+      },
+      {
+            "zh": "检查报告出来了，请医生看一下。",
+            "pinyin": "jiǎn chá bào gào chū lái le, qǐng yī shēng kàn yī xià.",
+            "vi": "Báo cáo kiểm tra ra rồi, xin bác sĩ xem một chút."
+      },
+      {
+            "zh": "结果正常，没有什么大问题。",
+            "pinyin": "jié guǒ zhèng cháng, méi yǒu shén me dà wèn tí.",
+            "vi": "Kết quả bình thường, không có vấn đề lớn."
+      },
+      {
+            "zh": "我需要再复查一次吗？",
+            "pinyin": "wǒ xū yào zài fù chá yī cì ma?",
+            "vi": "Tôi có cần kiểm tra lại một lần nữa không?"
+      },
+      {
+            "zh": "一周后再来复查比较好。",
+            "pinyin": "yī zhōu hòu zài lái fù chá bǐ jiào hǎo.",
+            "vi": "Sau một tuần đến kiểm tra lại là tốt hơn."
+      },
+      {
+            "zh": "请问超声检查在哪里做？",
+            "pinyin": "qǐng wèn chāo shēng jiǎn chá zài nǎ lǐ zuò?",
+            "vi": "Xin hỏi siêu âm làm ở đâu?"
+      },
+      {
+            "zh": "在三楼超声科，先取号。",
+            "pinyin": "zài sān lóu chāo shēng kē, xiān qǔ hào.",
+            "vi": "Ở khoa siêu âm tầng 3, lấy số trước."
+      },
+      {
+            "zh": "这个药一天吃几次？",
+            "pinyin": "zhè ge yào yī tiān chī jǐ cì?",
+            "vi": "Thuốc này một ngày uống mấy lần?"
+      },
+      {
+            "zh": "一天三次，饭后吃。",
+            "pinyin": "yī tiān sān cì, fàn hòu chī.",
+            "vi": "Một ngày ba lần, uống sau ăn."
+      },
+      {
+            "zh": "这个药有没有副作用？",
+            "pinyin": "zhè ge yào yǒu méi yǒu fù zuò yòng?",
+            "vi": "Thuốc này có tác dụng phụ không?"
+      },
+      {
+            "zh": "可能会有点困，注意休息。",
+            "pinyin": "kě néng huì yǒu diǎn kùn, zhù yì xiū xi.",
+            "vi": "Có thể hơi buồn ngủ, chú ý nghỉ ngơi."
+      },
+      {
+            "zh": "我需要饭前吃还是饭后吃？",
+            "pinyin": "wǒ xū yào fàn qián chī hái shì fàn hòu chī?",
+            "vi": "Tôi cần uống trước ăn hay sau ăn?"
+      },
+      {
+            "zh": "饭后吃比较合适。",
+            "pinyin": "fàn hòu chī bǐ jiào hé shì.",
+            "vi": "Uống sau ăn là hợp lý hơn."
+      },
+      {
+            "zh": "这个药需要连续吃几天？",
+            "pinyin": "zhè ge yào xū yào lián xù chī jǐ tiān?",
+            "vi": "Thuốc này cần uống liên tục mấy ngày?"
+      },
+      {
+            "zh": "一般吃五到七天。",
+            "pinyin": "yī bān chī wǔ dào qī tiān.",
+            "vi": "Thường uống năm đến bảy ngày."
+      },
+      {
+            "zh": "我可以同时吃两种药吗？",
+            "pinyin": "wǒ kě yǐ tóng shí chī liǎng zhǒng yào ma?",
+            "vi": "Tôi có thể uống đồng thời hai loại thuốc không?"
+      },
+      {
+            "zh": "最好间隔半小时再吃。",
+            "pinyin": "zuì hǎo jiàn gé bàn xiǎo shí zài chī.",
+            "vi": "Tốt nhất cách nửa tiếng rồi mới uống."
+      },
+      {
+            "zh": "这个药需要冷藏保存吗？",
+            "pinyin": "zhè ge yào xū yào lěng cáng bǎo cún ma?",
+            "vi": "Thuốc này có cần bảo quản lạnh không?"
+      },
+      {
+            "zh": "不需要，常温保存就行。",
+            "pinyin": "bù xū yào, cháng wēn bǎo cún jiù xíng.",
+            "vi": "Không cần, bảo quản nhiệt độ thường là được."
+      },
+      {
+            "zh": "我忘记吃药了，现在补吃可以吗？",
+            "pinyin": "wǒ wàng jì chī yào le, xiàn zài bǔ chī kě yǐ ma?",
+            "vi": "Tôi quên uống thuốc, bây giờ uống bù được không?"
+      },
+      {
+            "zh": "如果时间不长，可以补吃。",
+            "pinyin": "rú guǒ shí jiān bù cháng, kě yǐ bǔ chī.",
+            "vi": "Nếu thời gian không lâu, có thể uống bù."
+      },
+      {
+            "zh": "这个药苦吗？小孩能吃吗？",
+            "pinyin": "zhè ge yào kǔ ma? xiǎo hái néng chī ma?",
+            "vi": "Thuốc này có đắng không? Trẻ em uống được không?"
+      },
+      {
+            "zh": "有点苦，可以兑一点水再喝。",
+            "pinyin": "yǒu diǎn kǔ, kě yǐ duì yī diǎn shuǐ zài hē.",
+            "vi": "Hơi đắng, có thể pha một chút nước rồi uống."
+      },
+      {
+            "zh": "我需要开点退烧药。",
+            "pinyin": "wǒ xū yào kāi diǎn tuì shāo yào.",
+            "vi": "Tôi cần kê một ít thuốc hạ sốt."
+      },
+      {
+            "zh": "先测一下体温，再决定用药。",
+            "pinyin": "xiān cè yī xià tǐ wēn, zài jué dìng yòng yào.",
+            "vi": "Đo nhiệt độ trước, rồi mới quyết định dùng thuốc."
+      },
+      {
+            "zh": "这个药吃完后需要复诊吗？",
+            "pinyin": "zhè ge yào chī wán hòu xū yào fù zhěn ma?",
+            "vi": "Uống hết thuốc này có cần khám lại không?"
+      },
+      {
+            "zh": "如果症状没好转，需要再来看。",
+            "pinyin": "rú guǒ zhèng zhuàng méi hǎo zhuǎn, xū yào zài lái kàn.",
+            "vi": "Nếu triệu chứng không đỡ, cần đến khám lại."
+      },
+      {
+            "zh": "我需要住院治疗吗？",
+            "pinyin": "wǒ xū yào zhù yuàn zhì liáo ma?",
+            "vi": "Tôi có cần nằm viện điều trị không?"
+      },
+      {
+            "zh": "建议住院观察几天比较好。",
+            "pinyin": "jiàn yì zhù yuàn guān chá jǐ tiān bǐ jiào hǎo.",
+            "vi": "Khuyên nằm viện theo dõi vài ngày là tốt hơn."
+      },
+      {
+            "zh": "请问病房在几楼？",
+            "pinyin": "qǐng wèn bìng fáng zài jǐ lóu?",
+            "vi": "Xin hỏi phòng bệnh ở tầng mấy?"
+      },
+      {
+            "zh": "在五楼，我带你过去。",
+            "pinyin": "zài wǔ lóu, wǒ dài nǐ guò qù.",
+            "vi": "Ở tầng 5, tôi dẫn bạn qua."
+      },
+      {
+            "zh": "住院需要带什么东西？",
+            "pinyin": "zhù yuàn xū yào dài shén me dōng xi?",
+            "vi": "Nằm viện cần mang những gì?"
+      },
+      {
+            "zh": "带换洗衣服和个人用品就行。",
+            "pinyin": "dài huàn xǐ yī fu hé gè rén yòng pǐn jiù xíng.",
+            "vi": "Mang quần áo thay và đồ dùng cá nhân là được."
+      },
+      {
+            "zh": "我可以有人陪护吗？",
+            "pinyin": "wǒ kě yǐ yǒu rén péi hù ma?",
+            "vi": "Tôi có thể có người chăm sóc không?"
+      },
+      {
+            "zh": "可以，但晚上需要登记。",
+            "pinyin": "kě yǐ, dàn wǎn shang xū yào dēng jì.",
+            "vi": "Được, nhưng tối cần đăng ký."
+      },
+      {
+            "zh": "每天几点可以探视？",
+            "pinyin": "měi tiān jǐ diǎn kě yǐ tàn shì?",
+            "vi": "Mỗi ngày mấy giờ có thể thăm bệnh?"
+      },
+      {
+            "zh": "下午两点到五点可以探视。",
+            "pinyin": "xià wǔ liǎng diǎn dào wǔ diǎn kě yǐ tàn shì.",
+            "vi": "Chiều hai giờ đến năm giờ có thể thăm."
+      },
+      {
+            "zh": "我需要打针还是输液？",
+            "pinyin": "wǒ xū yào dǎ zhēn hái shì shū yè?",
+            "vi": "Tôi cần tiêm hay truyền dịch?"
+      },
+      {
+            "zh": "先输液，观察一下情况。",
+            "pinyin": "xiān shū yè, guān chá yī xià qíng kuàng.",
+            "vi": "Truyền dịch trước, theo dõi tình hình một chút."
+      },
+      {
+            "zh": "护士，我的点滴快完了。",
+            "pinyin": "hù shi, wǒ de diǎn dī kuài wán le.",
+            "vi": "Y tá, truyền dịch của tôi sắp hết."
+      },
+      {
+            "zh": "我马上过来换。",
+            "pinyin": "wǒ mǎ shàng guò lái huàn.",
+            "vi": "Tôi qua thay ngay."
+      },
+      {
+            "zh": "晚上可以出去走走吗？",
+            "pinyin": "wǎn shang kě yǐ chū qù zǒu zou ma?",
+            "vi": "Tối có thể ra ngoài đi dạo không?"
+      },
+      {
+            "zh": "可以，但不要走太远。",
+            "pinyin": "kě yǐ, dàn bú yào zǒu tài yuǎn.",
+            "vi": "Được, nhưng đừng đi quá xa."
+      },
+      {
+            "zh": "我什么时候可以出院？",
+            "pinyin": "wǒ shén me shí hou kě yǐ chū yuàn?",
+            "vi": "Tôi khi nào có thể xuất viện?"
+      },
+      {
+            "zh": "如果指标正常，明天可以出院。",
+            "pinyin": "rú guǒ zhǐ biāo zhèng cháng, míng tiān kě yǐ chū yuàn.",
+            "vi": "Nếu chỉ số bình thường, ngày mai có thể xuất viện."
+      },
+      {
+            "zh": "出院后需要注意什么？",
+            "pinyin": "chū yuàn hòu xū yào zhù yì shén me?",
+            "vi": "Sau khi xuất viện cần chú ý gì?"
+      },
+      {
+            "zh": "注意休息，按时吃药，定期复查。",
+            "pinyin": "zhù yì xiū xi, àn shí chī yào, dìng qī fù chá.",
+            "vi": "Chú ý nghỉ ngơi, uống thuốc đúng giờ, kiểm tra định kỳ."
+      },
+      {
+            "zh": "我可以用医保报销吗？",
+            "pinyin": "wǒ kě yǐ yòng yī bǎo bào xiāo ma?",
+            "vi": "Tôi có thể dùng bảo hiểm y tế hoàn tiền không?"
+      },
+      {
+            "zh": "可以，带医保卡到窗口结算。",
+            "pinyin": "kě yǐ, dài yī bǎo kǎ dào chuāng kǒu jié suàn.",
+            "vi": "Được, mang thẻ bảo hiểm đến quầy thanh toán."
+      },
+      {
+            "zh": "这次住院大概要花多少钱？",
+            "pinyin": "zhè cì zhù yuàn dà gài yào huā duō shao qián?",
+            "vi": "Lần nằm viện này khoảng hết bao nhiêu tiền?"
+      },
+      {
+            "zh": "具体费用等结算时才能确定。",
+            "pinyin": "jù tǐ fèi yòng děng jié suàn shí cái néng què dìng.",
+            "vi": "Chi phí cụ thể đến lúc thanh toán mới xác định được."
+      },
+      {
+            "zh": "我可以先交押金吗？",
+            "pinyin": "wǒ kě yǐ xiān jiāo yā jīn ma?",
+            "vi": "Tôi có thể nộp tiền đặt cọc trước không?"
+      },
+      {
+            "zh": "可以，到收费处办理。",
+            "pinyin": "kě yǐ, dào shōu fèi chù bàn lǐ.",
+            "vi": "Được, đến chỗ thu phí làm thủ tục."
+      },
+      {
+            "zh": "医保卡余额不够怎么办？",
+            "pinyin": "yī bǎo kǎ yú é bù gòu zěn me bàn?",
+            "vi": "Số dư thẻ bảo hiểm không đủ thì làm sao?"
+      },
+      {
+            "zh": "可以自费补差额。",
+            "pinyin": "kě yǐ zì fèi bǔ chā é.",
+            "vi": "Có thể tự trả phần chênh lệch."
+      },
+      {
+            "zh": "请问发票在哪里开？",
+            "pinyin": "qǐng wèn fā piào zài nǎ lǐ kāi?",
+            "vi": "Xin hỏi hóa đơn xuất ở đâu?"
+      },
+      {
+            "zh": "结算后在收费窗口开。",
+            "pinyin": "jié suàn hòu zài shōu fèi chuāng kǒu kāi.",
+            "vi": "Sau khi thanh toán xuất ở quầy thu phí."
+      },
+      {
+            "zh": "我可以用微信或支付宝付款吗？",
+            "pinyin": "wǒ kě yǐ yòng Wēi xìn huò Zhī fù bǎo fù kuǎn ma?",
+            "vi": "Tôi có thể dùng WeChat hoặc Alipay thanh toán không?"
+      },
+      {
+            "zh": "可以，扫码付款就行。",
+            "pinyin": "kě yǐ, sǎo mǎ fù kuǎn jiù xíng.",
+            "vi": "Được, quét mã thanh toán là được."
+      },
+      {
+            "zh": "这次检查费用可以报销多少？",
+            "pinyin": "zhè cì jiǎn chá fèi yòng kě yǐ bào xiāo duō shao?",
+            "vi": "Chi phí kiểm tra lần này có thể hoàn bao nhiêu?"
+      },
+      {
+            "zh": "根据医保政策，大概报销百分之七十。",
+            "pinyin": "gēn jù yī bǎo zhèng cè, dà gài bào xiāo bǎi fēn zhī qī shí.",
+            "vi": "Theo chính sách bảo hiểm, khoảng hoàn 70%."
+      },
+      {
+            "zh": "我需要提前办理出院手续吗？",
+            "pinyin": "wǒ xū yào tí qián bàn lǐ chū yuàn shǒu xù ma?",
+            "vi": "Tôi có cần làm thủ tục xuất viện trước không?"
+      },
+      {
+            "zh": "需要，先到护士站办理。",
+            "pinyin": "xū yào, xiān dào hù shi zhàn bàn lǐ.",
+            "vi": "Cần, đến trạm y tá làm trước."
+      },
+      {
+            "zh": "商业保险可以同时报销吗？",
+            "pinyin": "shāng yè bǎo xiǎn kě yǐ tóng shí bào xiāo ma?",
+            "vi": "Bảo hiểm thương mại có thể hoàn cùng lúc không?"
+      },
+      {
+            "zh": "可以，但需要提供相关材料。",
+            "pinyin": "kě yǐ, dàn xū yào tí gōng xiāng guān cái liào.",
+            "vi": "Được, nhưng cần cung cấp tài liệu liên quan."
+      },
+      {
+            "zh": "费用清单在哪里查看？",
+            "pinyin": "fèi yòng qīng dān zài nǎ lǐ chá kàn?",
+            "vi": "Danh sách chi phí xem ở đâu?"
+      },
+      {
+            "zh": "在收费窗口或手机App上查看。",
+            "pinyin": "zài shōu fèi chuāng kǒu huò shǒu jī App shàng chá kàn.",
+            "vi": "Xem ở quầy thu phí hoặc trên app điện thoại."
+      },
+      {
+            "zh": "我需要急诊，怎么走？",
+            "pinyin": "wǒ xū yào jí zhěn, zěn me zǒu?",
+            "vi": "Tôi cần cấp cứu, đi thế nào?"
+      },
+      {
+            "zh": "急诊在一楼，跟着绿色标识走。",
+            "pinyin": "jí zhěn zài yī lóu, gēn zhe lǜ sè biāo zhì zǒu.",
+            "vi": "Cấp cứu ở tầng 1, đi theo biển xanh lá."
+      },
+      {
+            "zh": "病人突然晕倒了，怎么办？",
+            "pinyin": "bìng rén tū rán yūn dǎo le, zěn me bàn?",
+            "vi": "Bệnh nhân đột nhiên ngất, làm sao?"
+      },
+      {
+            "zh": "马上叫医生，先让他平躺。",
+            "pinyin": "mǎ shàng jiào yī shēng, xiān ràng tā píng tǎng.",
+            "vi": "Gọi bác sĩ ngay, trước để anh ấy nằm ngửa."
+      },
+      {
+            "zh": "我胸口很痛，可能是心脏问题。",
+            "pinyin": "wǒ xiōng kǒu hěn tòng, kě néng shì xīn zàng wèn tí.",
+            "vi": "Ngực tôi rất đau, có thể là vấn đề tim."
+      },
+      {
+            "zh": "请马上到急诊，我帮你叫医生。",
+            "pinyin": "qǐng mǎ shàng dào jí zhěn, wǒ bāng nǐ jiào yī shēng.",
+            "vi": "Xin đến cấp cứu ngay, tôi giúp bạn gọi bác sĩ."
+      },
+      {
+            "zh": "有人受伤流血了，需要急救。",
+            "pinyin": "yǒu rén shòu shāng liú xuě le, xū yào jí jiù.",
+            "vi": "Có người bị thương chảy máu, cần cấp cứu."
+      },
+      {
+            "zh": "先用干净的布按住伤口。",
+            "pinyin": "xiān yòng gān jìng de bù àn zhù shāng kǒu.",
+            "vi": "Trước dùng vải sạch ấn vào vết thương."
+      },
+      {
+            "zh": "请问急诊室现在忙吗？",
+            "pinyin": "qǐng wèn jí zhěn shì xiàn zài máng ma?",
+            "vi": "Xin hỏi phòng cấp cứu hiện có bận không?"
+      },
+      {
+            "zh": "比较忙，但紧急情况会优先处理。",
+            "pinyin": "bǐ jiào máng, dàn jǐn jí qíng kuàng huì yōu xiān chǔ lǐ.",
+            "vi": "Khá bận, nhưng trường hợp khẩn cấp sẽ ưu tiên xử lý."
+      },
+      {
+            "zh": "我呼吸困难，需要吸氧吗？",
+            "pinyin": "wǒ hū xī kùn nan, xū yào xī yǎng ma?",
+            "vi": "Tôi thở khó, có cần thở oxy không?"
+      },
+      {
+            "zh": "先测一下血氧，再决定。",
+            "pinyin": "xiān cè yī xià xuè yǎng, zài jué dìng.",
+            "vi": "Đo oxy máu trước, rồi quyết định."
+      },
+      {
+            "zh": "请帮我叫救护车。",
+            "pinyin": "qǐng bāng wǒ jiào jiù hù chē.",
+            "vi": "Xin giúp tôi gọi xe cứu thương."
+      },
+      {
+            "zh": "已经叫了，马上就到。",
+            "pinyin": "yǐ jīng jiào le, mǎ shàng jiù dào.",
+            "vi": "Đã gọi rồi, sắp đến ngay."
+      },
+      {
+            "zh": "病人发烧很高，需要处理吗？",
+            "pinyin": "bìng rén fā shāo hěn gāo, xū yào chǔ lǐ ma?",
+            "vi": "Bệnh nhân sốt rất cao, có cần xử lý không?"
+      },
+      {
+            "zh": "先物理降温，再测体温。",
+            "pinyin": "xiān wù lǐ jiàng wēn, zài cè tǐ wēn.",
+            "vi": "Trước hạ nhiệt bằng phương pháp vật lý, rồi đo nhiệt độ."
+      },
+      {
+            "zh": "我需要马上做心电图。",
+            "pinyin": "wǒ xū yào mǎ shàng zuò xīn diàn tú.",
+            "vi": "Tôi cần làm điện tâm đồ ngay."
+      },
+      {
+            "zh": "请跟我来，急诊室有设备。",
+            "pinyin": "qǐng gēn wǒ lái, jí zhěn shì yǒu shè bèi.",
+            "vi": "Xin theo tôi, phòng cấp cứu có thiết bị."
+      },
+      {
+            "zh": "家属在哪里等比较合适？",
+            "pinyin": "jiā shǔ zài nǎ lǐ děng bǐ jiào hé shì?",
+            "vi": "Người nhà đợi ở đâu là hợp lý hơn?"
+      },
+      {
+            "zh": "在急诊门口等候区等。",
+            "pinyin": "zài jí zhěn mén kǒu děng hòu qū děng.",
+            "vi": "Đợi ở khu chờ cửa cấp cứu."
+      },
+      {
+            "zh": "你最近身体怎么样？",
+            "pinyin": "nǐ zuì jìn shēn tǐ zěn me yàng?",
+            "vi": "Gần đây sức khỏe bạn thế nào?"
+      },
+      {
+            "zh": "还行，就是有点累。",
+            "pinyin": "hái xíng, jiù shì yǒu diǎn lèi.",
+            "vi": "Ổn, chỉ là hơi mệt."
+      },
+      {
+            "zh": "多喝热水，注意休息。",
+            "pinyin": "duō hē rè shuǐ, zhù yì xiū xi.",
+            "vi": "Uống nhiều nước nóng, chú ý nghỉ ngơi."
+      },
+      {
+            "zh": "我最近睡眠不太好。",
+            "pinyin": "wǒ zuì jìn shuì mián bú tài hǎo.",
+            "vi": "Gần đây giấc ngủ tôi không tốt lắm."
+      },
+      {
+            "zh": "试试早点睡，少看手机。",
+            "pinyin": "shì shi zǎo diǎn shuì, shǎo kàn shǒu jī.",
+            "vi": "Thử ngủ sớm, ít xem điện thoại."
+      },
+      {
+            "zh": "你有没有定期体检？",
+            "pinyin": "nǐ yǒu méi yǒu dìng qī tǐ jiǎn?",
+            "vi": "Bạn có khám sức khỏe định kỳ không?"
+      },
+      {
+            "zh": "有，公司每年组织一次。",
+            "pinyin": "yǒu, gōng sī měi nián zǔ zhī yī cì.",
+            "vi": "Có, công ty mỗi năm tổ chức một lần."
+      },
+      {
+            "zh": "我感觉压力有点大。",
+            "pinyin": "wǒ gǎn jué yā lì yǒu diǎn dà.",
+            "vi": "Tôi cảm thấy áp lực hơi lớn."
+      },
+      {
+            "zh": "适当运动可以缓解压力。",
+            "pinyin": "shì dàng yùn dòng kě yǐ huǎn jiě yā lì.",
+            "vi": "Vận động vừa phải có thể giảm áp lực."
+      },
+      {
+            "zh": "你最近食欲怎么样？",
+            "pinyin": "nǐ zuì jìn shí yù zěn me yàng?",
+            "vi": "Gần đây khẩu vị bạn thế nào?"
+      },
+      {
+            "zh": "还行，就是有时候不太想吃。",
+            "pinyin": "hái xíng, jiù shì yǒu shí hou bú tài xiǎng chī.",
+            "vi": "Ổn, chỉ là đôi khi không muốn ăn."
+      },
+      {
+            "zh": "注意营养均衡，不要节食。",
+            "pinyin": "zhù yì yíng yǎng jūn héng, bú yào jié shí.",
+            "vi": "Chú ý dinh dưỡng cân bằng, đừng ăn kiêng."
+      },
+      {
+            "zh": "我腰有点疼，是不是坐太久了？",
+            "pinyin": "wǒ yāo yǒu diǎn téng, shì bu shì zuò tài jiǔ le?",
+            "vi": "Lưng tôi hơi đau, có phải ngồi lâu quá không?"
+      },
+      {
+            "zh": "可能是，多起来活动一下。",
+            "pinyin": "kě néng shì, duō qǐ lái huó dòng yī xià.",
+            "vi": "Có thể, đứng dậy vận động nhiều hơn."
+      },
+      {
+            "zh": "你有没有过敏史？",
+            "pinyin": "nǐ yǒu méi yǒu guò mǐn shǐ?",
+            "vi": "Bạn có tiền sử dị ứng không?"
+      },
+      {
+            "zh": "有，对花粉过敏。",
+            "pinyin": "yǒu, duì huā fěn guò mǐn.",
+            "vi": "Có, dị ứng phấn hoa."
+      },
+      {
+            "zh": "天气变化大，注意保暖。",
+            "pinyin": "tiān qì biàn huà dà, zhù yì bǎo nuǎn.",
+            "vi": "Thời tiết thay đổi nhiều, chú ý giữ ấm."
+      },
+      {
+            "zh": "我会注意的，谢谢提醒。",
+            "pinyin": "wǒ huì zhù yì de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ chú ý, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "最近有点上火，喉咙不舒服。",
+            "pinyin": "zuì jìn yǒu diǎn shàng huǒ, hóu lóng bù shū fu.",
+            "vi": "Gần đây hơi nóng trong người, họng không khỏe."
+      },
+      {
+            "zh": "多喝水，少吃辛辣的。",
+            "pinyin": "duō hē shuǐ, shǎo chī xīn là de.",
+            "vi": "Uống nhiều nước, ít ăn cay."
+      },
+      {
+            "zh": "我需要打流感疫苗吗？",
+            "pinyin": "wǒ xū yào dǎ liú gǎn yì miáo ma?",
+            "vi": "Tôi có cần tiêm vaccine cúm không?"
+      },
+      {
+            "zh": "建议打，可以预防流感。",
+            "pinyin": "jiàn yì dǎ, kě yǐ yù fáng liú gǎn.",
+            "vi": "Khuyên nên tiêm, có thể phòng cúm."
+      },
+      {
+            "zh": "洗手很重要，能预防很多病。",
+            "pinyin": "xǐ shǒu hěn zhòng yào, néng yù fáng hěn duō bìng.",
+            "vi": "Rửa tay rất quan trọng, có thể phòng nhiều bệnh."
+      },
+      {
+            "zh": "我会注意经常洗手。",
+            "pinyin": "wǒ huì zhù yì jīng cháng xǐ shǒu.",
+            "vi": "Tôi sẽ chú ý rửa tay thường xuyên."
+      },
+      {
+            "zh": "戴口罩可以减少感染风险。",
+            "pinyin": "dài kǒu zhào kě yǐ jiǎn shǎo gǎn rǎn fēng xiǎn.",
+            "vi": "Đeo khẩu trang có thể giảm nguy cơ lây nhiễm."
+      },
+      {
+            "zh": "在人多的地方我会戴口罩。",
+            "pinyin": "zài rén duō de dì fang wǒ huì dài kǒu zhào.",
+            "vi": "Ở chỗ đông người tôi sẽ đeo khẩu trang."
+      },
+      {
+            "zh": "多运动有助于提高免疫力。",
+            "pinyin": "duō yùn dòng yǒu zhù yú tí gāo miǎn yì lì.",
+            "vi": "Vận động nhiều giúp nâng cao miễn dịch."
+      },
+      {
+            "zh": "我每周会跑步两次。",
+            "pinyin": "wǒ měi zhōu huì pǎo bù liǎng cì.",
+            "vi": "Tôi mỗi tuần sẽ chạy bộ hai lần."
+      },
+      {
+            "zh": "注意饮食卫生，少吃生冷食物。",
+            "pinyin": "zhù yì yǐn shí wèi shēng, shǎo chī shēng lěng shí wù.",
+            "vi": "Chú ý vệ sinh ăn uống, ít ăn đồ sống lạnh."
+      },
+      {
+            "zh": "我会注意的，谢谢提醒。",
+            "pinyin": "wǒ huì zhù yì de, xiè xie tí xǐng.",
+            "vi": "Tôi sẽ chú ý, cảm ơn nhắc nhở."
+      },
+      {
+            "zh": "定期体检可以早发现问题。",
+            "pinyin": "dìng qī tǐ jiǎn kě yǐ zǎo fā xiàn wèn tí.",
+            "vi": "Khám sức khỏe định kỳ có thể phát hiện vấn đề sớm."
+      },
+      {
+            "zh": "我计划明年做一次全面体检。",
+            "pinyin": "wǒ jì huà míng nián zuò yī cì quán miàn tǐ jiǎn.",
+            "vi": "Tôi dự định năm sau làm một lần khám tổng quát."
+      },
+      {
+            "zh": "保持良好作息对身体很重要。",
+            "pinyin": "bǎo chí liáng hǎo zuò xī duì shēn tǐ hěn zhòng yào.",
+            "vi": "Giữ thói quen sinh hoạt tốt rất quan trọng với cơ thể."
+      },
+      {
+            "zh": "我会尽量早睡早起。",
+            "pinyin": "wǒ huì jǐn liàng zǎo shuì zǎo qǐ.",
+            "vi": "Tôi sẽ cố gắng ngủ sớm dậy sớm."
+      },
+      {
+            "zh": "天气干燥，多喝水可以预防。",
+            "pinyin": "tiān qì gān zào, duō hē shuǐ kě yǐ yù fáng.",
+            "vi": "Thời tiết khô, uống nhiều nước có thể phòng ngừa."
+      },
+      {
+            "zh": "我会多喝水的。",
+            "pinyin": "wǒ huì duō hē shuǐ de.",
+            "vi": "Tôi sẽ uống nhiều nước."
+      },
+      {
+            "zh": "工作压力大时要注意放松。",
+            "pinyin": "gōng zuò yā lì dà shí yào zhù yì fàng sōng.",
+            "vi": "Khi áp lực công việc lớn cần chú ý thư giãn."
+      },
+      {
+            "zh": "我会适当休息，别太累。",
+            "pinyin": "wǒ huì shì dàng xiū xi, bié tài lèi.",
+            "vi": "Tôi sẽ nghỉ ngơi vừa phải, đừng quá mệt."
+      },
+      {
+            "zh": "家人有慢性病，需要特别注意。",
+            "pinyin": "jiā rén yǒu màn xìng bìng, xū yào tè bié zhù yì.",
+            "vi": "Người nhà có bệnh mãn tính, cần chú ý đặc biệt."
+      },
+      {
+            "zh": "我会定期陪他们复查。",
+            "pinyin": "wǒ huì dìng qī péi tā men fù chá.",
+            "vi": "Tôi sẽ định kỳ đưa họ đi kiểm tra lại."
+      },
+      {
+            "zh": "我头疼发烧，需要去医院看看。",
+            "pinyin": "wǒ tóu téng fā shāo, xū yào qù yī yuàn kàn kan.",
+            "vi": "Tôi đau đầu sốt, cần đến bệnh viện khám."
+      },
+      {
+            "zh": "请问挂号在哪里？我挂内科。",
+            "pinyin": "qǐng wèn guà hào zài nǎ lǐ? wǒ guà nèi kē.",
+            "vi": "Xin hỏi đăng ký ở đâu? Tôi đăng ký khoa nội."
+      },
+      {
+            "zh": "医生说我需要做血液检查。",
+            "pinyin": "yī shēng shuō wǒ xū yào zuò xuè yè jiǎn chá.",
+            "vi": "Bác sĩ nói tôi cần làm xét nghiệm máu."
+      },
+      {
+            "zh": "检查结果出来了，没有大问题。",
+            "pinyin": "jiǎn chá jié guǒ chū lái le, méi yǒu dà wèn tí.",
+            "vi": "Kết quả kiểm tra ra rồi, không có vấn đề lớn."
+      },
+      {
+            "zh": "这个药一天三次，饭后吃。",
+            "pinyin": "zhè ge yào yī tiān sān cì, fàn hòu chī.",
+            "vi": "Thuốc này một ngày ba lần, uống sau ăn."
+      },
+      {
+            "zh": "我需要住院观察几天。",
+            "pinyin": "wǒ xū yào zhù yuàn guān chá jǐ tiān.",
+            "vi": "Tôi cần nằm viện theo dõi vài ngày."
+      },
+      {
+            "zh": "可以用医保报销，带医保卡结算。",
+            "pinyin": "kě yǐ yòng yī bǎo bào xiāo, dài yī bǎo kǎ jié suàn.",
+            "vi": "Có thể dùng bảo hiểm hoàn, mang thẻ bảo hiểm thanh toán."
+      },
+      {
+            "zh": "我胸口痛，需要马上去急诊。",
+            "pinyin": "wǒ xiōng kǒu tòng, xū yào mǎ shàng qù jí zhěn.",
+            "vi": "Ngực tôi đau, cần đến cấp cứu ngay."
+      },
+      {
+            "zh": "多喝热水，注意休息，很快会好。",
+            "pinyin": "duō hē rè shuǐ, zhù yì xiū xi, hěn kuài huì hǎo.",
+            "vi": "Uống nhiều nước nóng, chú ý nghỉ ngơi, sẽ nhanh khỏi."
+      },
+      {
+            "zh": "我最近睡眠不好，有什么建议？",
+            "pinyin": "wǒ zuì jìn shuì mián bù hǎo, yǒu shén me jiàn yì?",
+            "vi": "Gần đây tôi ngủ không ngon, có gợi ý gì?"
+      },
+      {
+            "zh": "试试早点睡，少看手机。",
+            "pinyin": "shì shi zǎo diǎn shuì, shǎo kàn shǒu jī.",
+            "vi": "Thử ngủ sớm, ít xem điện thoại."
+      },
+      {
+            "zh": "我需要打疫苗预防流感吗？",
+            "pinyin": "wǒ xū yào dǎ yì miáo yù fáng liú gǎn ma?",
+            "vi": "Tôi có cần tiêm vaccine phòng cúm không?"
+      },
+      {
+            "zh": "建议打，可以减少感染风险。",
+            "pinyin": "jiàn yì dǎ, kě yǐ jiǎn shǎo gǎn rǎn fēng xiǎn.",
+            "vi": "Khuyên nên tiêm, có thể giảm nguy cơ lây nhiễm."
+      },
+      {
+            "zh": "出院后要注意休息，按时吃药。",
+            "pinyin": "chū yuàn hòu yào zhù yì xiū xi, àn shí chī yào.",
+            "vi": "Sau khi xuất viện chú ý nghỉ ngơi, uống thuốc đúng giờ."
+      },
+      {
+            "zh": "我有点上火，喉咙不舒服。",
+            "pinyin": "wǒ yǒu diǎn shàng huǒ, hóu lóng bù shū fu.",
+            "vi": "Tôi hơi nóng trong người, họng không khỏe."
+      },
+      {
+            "zh": "多喝水，少吃辛辣的食物。",
+            "pinyin": "duō hē shuǐ, shǎo chī xīn là de shí wù.",
+            "vi": "Uống nhiều nước, ít ăn đồ cay."
+      },
+      {
+            "zh": "请帮我叫医生，病人情况不好。",
+            "pinyin": "qǐng bāng wǒ jiào yī shēng, bìng rén qíng kuàng bù hǎo.",
+            "vi": "Xin giúp tôi gọi bác sĩ, tình trạng bệnh nhân không tốt."
+      },
+      {
+            "zh": "费用可以用医保报销一部分。",
+            "pinyin": "fèi yòng kě yǐ yòng yī bǎo bào xiāo yī bù fen.",
+            "vi": "Chi phí có thể dùng bảo hiểm hoàn một phần."
+      },
+      {
+            "zh": "注意个人卫生，可以预防很多疾病。",
+            "pinyin": "zhù yì gè rén wèi shēng, kě yǐ yù fáng hěn duō jí bìng.",
+            "vi": "Chú ý vệ sinh cá nhân, có thể phòng nhiều bệnh."
+      },
+      {
+            "zh": "祝你早日康复，注意身体。",
+            "pinyin": "zhù nǐ zǎo rì kāng fù, zhù yì shēn tǐ.",
+            "vi": "Chúc bạn sớm khỏe lại, chú ý sức khỏe."
+      }
+]
+  }
+};
 
     // ===== STATE =====
     let currentModule = null;
@@ -13729,7 +17926,7 @@ function logout() {
       } else if (unlockMode === "trial30") {
         const banner = document.createElement("div");
         banner.className = "trial-banner";
-        banner.innerHTML = "⏱️ Key dùng thử 30 phút — Full 13 chủ đề";
+        banner.innerHTML = "⏱️ Key dùng thử 30 phút — Full 22 chủ đề";
         list.appendChild(banner);
       }
 
@@ -13919,6 +18116,20 @@ function logout() {
     });
 
     // ===== LOAD BANK INFO FROM BACKEND =====
+    
+    function toggleBankInfo() {
+      const box = document.getElementById("bankInfo");
+      const arrow = document.getElementById("getKeyArrow");
+      if (box.style.display === "none") {
+        box.style.display = "block";
+        arrow.textContent = "▲";
+        loadBankInfo();
+      } else {
+        box.style.display = "none";
+        arrow.textContent = "▼";
+      }
+    }
+
     async function loadBankInfo() {
       try {
         const res = await fetch(API_URL + "/bank-info");
