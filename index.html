@@ -18123,7 +18123,15 @@ function logout() {
       if (box.style.display === "none") {
         box.style.display = "block";
         arrow.textContent = "▲";
-        loadBankInfo();
+        
+    // ===== TRACK VISIT (once per session) =====
+    (function() {
+      if (sessionStorage.getItem("visited")) return;
+      sessionStorage.setItem("visited", "1");
+      fetch(API_URL + "/visit", { method: "POST" }).catch(() => {});
+    })();
+
+    loadBankInfo();
       } else {
         box.style.display = "none";
         arrow.textContent = "▼";
@@ -18147,6 +18155,14 @@ function logout() {
         document.getElementById("bankContent").textContent = "Không tải được thông tin.";
       }
     }
+    
+    // ===== TRACK VISIT (once per session) =====
+    (function() {
+      if (sessionStorage.getItem("visited")) return;
+      sessionStorage.setItem("visited", "1");
+      fetch(API_URL + "/visit", { method: "POST" }).catch(() => {});
+    })();
+
     loadBankInfo();
 
   </script>
